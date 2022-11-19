@@ -7,7 +7,7 @@ import type { Sprite } from "pixi.js";
 //     name: string
 
 // }
-
+let startPoint: any;
 interface Action {
   move(x: number, y: number): void;
 }
@@ -32,14 +32,23 @@ export class SpriteEntry implements Action {
   private init_drag(width: number) {
     if (this.sprite) {
       this.sprite
-        .on("touchstart", () => {
+        .on("touchstart", (event) => {
           this.isDragging = true;
+          startPoint = { x: event.data.global.x, y: event.data.global.y };
         })
-        .on("touchmove", (e) => {
+        .on("touchmove", (event) => {
           if (this.isDragging) {
-            console.log(e.x, e.y);
-
-            this.move(e.x + width / 2, e.y - width / 2);
+            const dx = event.data.global.x - startPoint.x;
+            const dy = event.data.global.y - startPoint.y;
+            const spx = this.sprite?.position.x;
+            const spy = this.sprite?.position.y;
+            //精灵当前位置
+            console.log("精灵当前位置-x:", spx, "y:", spy);
+            if (spx != null && spy != null) {
+              this.move(spx + dx, spy + dy);
+            }
+            startPoint = { x: event.data.global.x, y: event.data.global.y };
+            // this.move(e.x + width / 2, e.y - width / 2);
           }
         })
         .on("touchend", () => {

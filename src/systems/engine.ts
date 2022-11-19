@@ -205,7 +205,7 @@ export const PixiEngine = {
 
   tickinit() {
     PixiApp.ticker.add((delta) => {
-      console.log("ricker");
+      // console.log("ricker");
     });
   },
   getloadsprite() {
