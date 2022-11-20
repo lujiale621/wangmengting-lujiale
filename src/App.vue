@@ -43,6 +43,10 @@ const onsetfurniture = () => {
   furnitureflag.value = !furnitureflag.value;
   furniturepath.value = furnitureflag.value ? furSet : furSave;
   if (furnitureflag.value) {
+    for (let i = 0; i < spritelist.length; i++) {
+      spritelist[i].setspedit(false);
+      console.log("关闭精灵编辑状态：", spritelist[i]);
+    }
     //弹出家具选择框
   } else {
     //关闭家具选择框

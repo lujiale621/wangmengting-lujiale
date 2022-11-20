@@ -16,7 +16,10 @@ export class SpriteEntry implements Action {
   public sprite: Sprite | undefined = undefined;
   public name: string = "";
   public url: string = "";
-
+  public spriteset: boolean = false;
+  public setspedit(flag: boolean) {
+    this.spriteset = flag;
+  }
   public move(x: number, y: number): void {
     if (this.sprite !== undefined) {
       this.sprite.position = {
@@ -33,22 +36,26 @@ export class SpriteEntry implements Action {
     if (this.sprite) {
       this.sprite
         .on("touchstart", (event) => {
-          this.isDragging = true;
-          startPoint = { x: event.data.global.x, y: event.data.global.y };
+          if (this.spriteset) {
+            this.isDragging = true;
+            startPoint = { x: event.data.global.x, y: event.data.global.y };
+          }
         })
         .on("touchmove", (event) => {
-          if (this.isDragging) {
-            const dx = event.data.global.x - startPoint.x;
-            const dy = event.data.global.y - startPoint.y;
-            const spx = this.sprite?.position.x;
-            const spy = this.sprite?.position.y;
-            //精灵当前位置
-            console.log("精灵当前位置-x:", spx, "y:", spy);
-            if (spx != null && spy != null) {
-              this.move(spx + dx, spy + dy);
+          if (this.spriteset) {
+            if (this.isDragging) {
+              const dx = event.data.global.x - startPoint.x;
+              const dy = event.data.global.y - startPoint.y;
+              const spx = this.sprite?.position.x;
+              const spy = this.sprite?.position.y;
+              //精灵当前位置
+              console.log("精灵当前位置-x:", spx, "y:", spy);
+              if (spx != null && spy != null) {
+                this.move(spx + dx, spy + dy);
+              }
+              startPoint = { x: event.data.global.x, y: event.data.global.y };
+              // this.move(e.x + width / 2, e.y - width / 2);
             }
-            startPoint = { x: event.data.global.x, y: event.data.global.y };
-            // this.move(e.x + width / 2, e.y - width / 2);
           }
         })
         .on("touchend", () => {
@@ -64,7 +71,7 @@ export class SpriteEntry implements Action {
     this.sprite = sprite;
     this.name = name;
     this.url = url;
-
+    this.spriteset = false;
     this.init_drag(width);
   }
 }
