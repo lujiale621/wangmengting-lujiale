@@ -31,6 +31,7 @@ const imgUrl = new URL(prop.sp?.url, import.meta.url);
   background-image: url("@/assets/furnbg.png");
   background-size: 100% 100%;
   transform: rotate(90deg);
-  margin: 5px 0px;
+  margin: 2px 2px;
+  align-items: center;
 }
 </style>

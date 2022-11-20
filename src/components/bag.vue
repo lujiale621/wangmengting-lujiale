@@ -9,6 +9,8 @@ import type { SpriteEntry } from "../systems/obj";
 // let spritelist: Array<spriteobj>
 const count = ref(0);
 // let spobj: SpriteEntry;
+const widtha = ref(1);
+const heightb = ref(1);
 let bs = new BetterScroll(".wrapper", {
   movable: true,
   zoom: true,
@@ -17,8 +19,10 @@ let bs = new BetterScroll(".wrapper", {
 });
 
 defineProps<{ msg: string; splist: Array<SpriteEntry> }>();
-
 onMounted(() => {
+  widtha.value = window.screen.width;
+  heightb.value = window.screen.height;
+  console.log(widtha.value);
   let bs = new BetterScroll(".wrapper", {
     movable: true,
     zoom: true,
@@ -30,7 +34,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
+  <div
+    :style="'width:' + '70' + 'px' + ';' + 'height:' + heightb + 'px'"
+    class="container"
+  >
     <div class="contenter">
       <div class="furniturn">
         <div class="wrapper">
@@ -47,33 +54,39 @@ onMounted(() => {
 
 <style scoped>
 .container {
-  /* transform: rotate(90deg); */
-  /* background-color: bisque; */
-  height: 100%;
-  width: 70px;
+  background-color: bisque;
+
   display: flex;
+  /* top: 0;
+  bottom: 0; */
   position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translate(-50%, -50%);
+  /* bottom: 0px;
+  left: 0px; */
+  background-image: url("src/assets/swbg.png");
   background-size: 100% 100%;
-  top: 0px;
-  left: 0px;
-  /* background-image: url("src/assets/swbg.png"); */
+  margin: auto;
+  background-position: center;
 }
 
 .contenter {
-  background-image: url("@/assets/swbg.png");
-  /* background-color: bisque; */
-  height: 100%;
-  width: 70px;
+  /* background-image: url("src/assets/swbg.png"); */
+  /* height: 100%;
+  width: 70px; */
   display: flex;
   position: absolute;
   background-size: 100% 100%;
-  top: 0px;
-  left: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .furniturn {
-  width: 60px;
-  margin: 6px;
+  width: 100%;
+
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,13 +94,11 @@ onMounted(() => {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 18rem;
 }
 
 .content {
   height: 100%;
-  width: 50px;
+  width: 100%;
   padding: 0%;
-  margin: 2px;
 }
 </style>
