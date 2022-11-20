@@ -60,8 +60,8 @@ export const PixiEngine = {
     background = new PIXI.Sprite(PIXI.Texture.from(backgroundPath));
     background.name = "background";
     background.angle = 90;
-    background.width = scwidth * 4.5;
-    background.height = scwidth * 1.5;
+    background.width = scwidth * 3.6;
+    background.height = scwidth * 1.2;
     //背景图长度
     backgroundlength = background.width;
     //背景图宽度
