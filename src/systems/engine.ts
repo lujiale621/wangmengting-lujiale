@@ -16,10 +16,14 @@ let backgroundlength: number;
 let backgroundcenter: number;
 let maxleftmovelenth: number;
 let maxrightmovelenth: number;
+let maxtopmovelenth: number;
+let maxbottommovelenth: number;
+let backgroundheightlength: number;
 let poivlength: number;
+let pohilength: number;
 let dragFlag = false;
 let startPoint: any;
-
+let backgroundheightcenter: number;
 //舞台中心
 // let stagecenturey:number
 // let stagecenturex:number
@@ -56,23 +60,33 @@ export const PixiEngine = {
     background = new PIXI.Sprite(PIXI.Texture.from(backgroundPath));
     background.name = "background";
     background.angle = 90;
-    background.width = scwidth * 3;
-    background.height = scwidth;
+    background.width = scwidth * 6;
+    background.height = scwidth * 2;
     //背景图长度
     backgroundlength = background.width;
+    //背景图宽度
+    backgroundheightlength = background.height;
+    //一半画板宽度
+    const canvheightlength = scwidth / 2;
+    const cutlentheight = backgroundheightlength - canvheightlength;
     //一半画板长度
     const canvlength = scheight / 2;
     const cutlent = backgroundlength - canvlength;
+    //宽需要偏移量
+    pohilength = cutlentheight - backgroundheightlength / 2;
+    maxtopmovelenth = pohilength;
+    maxbottommovelenth = pohilength;
+    backgroundheightcenter = background.width / 2;
     //需要偏移量
     poivlength = cutlent - backgroundlength / 2;
     maxleftmovelenth = poivlength;
     maxrightmovelenth = poivlength;
     backgroundcenter = background.height / 2;
     background.position = {
-      x: background.height,
+      x: background.height - pohilength,
       y: -poivlength,
     };
-
+    console.log("x需要偏移量:", pohilength, "y需要偏移量:", poivlength);
     xiaomihu = new PIXI.Sprite(PIXI.Texture.from(xiaomihuPath));
     const xiaomihuobj: SpriteEntry = new SpriteEntry(
       xiaomihu,
@@ -127,12 +141,13 @@ export const PixiEngine = {
       if (dragFlag) {
         const dx = event.data.global.x - startPoint.x;
         const dy = event.data.global.y - startPoint.y;
-        // PixiApp.stage.position.x += dx;
+        PixiApp.stage.position.x += dx;
         PixiApp.stage.position.y += dy;
 
         maxleftmovelenth += dy;
         maxrightmovelenth -= dy;
-
+        maxtopmovelenth += dx;
+        maxbottommovelenth -= dx;
         console.log(
           "maxleftmovelenth:",
           maxleftmovelenth,
@@ -144,7 +159,7 @@ export const PixiEngine = {
           dragFlag = false;
           maxleftmovelenth = 0;
           maxrightmovelenth = 2 * poivlength;
-          PixiApp.stage.position.x = 0;
+          // PixiApp.stage.position.x = 0;
           PixiApp.stage.position.y = -poivlength;
 
           console.log("maxleftmovelenth reset");
@@ -160,7 +175,7 @@ export const PixiEngine = {
           maxrightmovelenth = 0;
           maxleftmovelenth = 2 * poivlength;
 
-          PixiApp.stage.position.x = 0;
+          // PixiApp.stage.position.x = 0;
           PixiApp.stage.position.y = poivlength;
           console.log("maxrightmovelenth reset");
           console.log(
@@ -168,6 +183,36 @@ export const PixiEngine = {
             maxleftmovelenth,
             "maxrightmovelenth",
             maxrightmovelenth
+          );
+        }
+        if (maxtopmovelenth < 0) {
+          dragFlag = false;
+          maxtopmovelenth = 0;
+          maxbottommovelenth = 2 * pohilength;
+          PixiApp.stage.position.x = -pohilength;
+          // PixiApp.stage.position.y = -pohilength;
+
+          console.log("maxtopmovelenth reset");
+          console.log(
+            "maxtopmovelenth:",
+            maxtopmovelenth,
+            "maxbottommovelenth",
+            maxbottommovelenth
+          );
+        }
+        if (maxbottommovelenth < 0) {
+          dragFlag = false;
+          maxbottommovelenth = 0;
+          maxtopmovelenth = 2 * pohilength;
+
+          PixiApp.stage.position.x = pohilength;
+          // PixiApp.stage.position.y = pohilength;
+          console.log("maxbottommovelenth reset");
+          console.log(
+            "maxtopmovelenth:",
+            maxtopmovelenth,
+            "maxbottommovelenth",
+            maxbottommovelenth
           );
         }
         console.log("stagecenturex:", PixiApp.stage.position.x);
