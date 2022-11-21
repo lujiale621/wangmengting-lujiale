@@ -59,7 +59,7 @@ export const PixiEngine = {
   getCanvas() {
     return PixiApp.view;
   },
-  async loadobj(scwidth: number, scheight: number) {
+  loadobj(scwidth: number, scheight: number) {
     console.log("setup");
     console.log("windowwidth:", scwidth);
     console.log("windowheight:", scheight);
@@ -101,7 +101,7 @@ export const PixiEngine = {
     );
     // const sheet = Assets.load("assets/spritesheet.json");
 
-    await sheet.parse();
+    sheet.parse();
     const ansp = new AnimatedSprite(sheet.animations["fireplace_wps图片"]);
     ansp.angle = 90;
     ansp.width = scwidth / 3;
