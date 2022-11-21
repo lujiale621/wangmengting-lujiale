@@ -2,7 +2,7 @@
 // import { ref } from "vue";
 import { onMounted } from "vue";
 import type { SpriteEntry } from "@/systems/obj";
-
+import furnbgpath from "@/assets/furnbg.png";
 const prop = defineProps<{ sp: SpriteEntry }>();
 
 function clickfurn(e: TouchEvent) {
@@ -15,10 +15,16 @@ function clickfurn(e: TouchEvent) {
     "pagey",
     e.changedTouches[0].pageY
   );
+
   console.log("click");
   console.log(prop.sp);
   //设置精灵为可编辑状态
   prop.sp.setspedit(true);
+
+  // prop.sp.sprite!.position = {
+  //   x: e.changedTouches[0].pageX,
+  //   y: e.changedTouches[0].pageY,
+  // };
 }
 
 onMounted(() => {
@@ -28,21 +34,28 @@ const imgUrl = new URL(prop.sp?.url, import.meta.url);
 </script>
 
 <template>
-  <div
-    @touchstart="clickfurn"
-    class="box"
-    :style="{ backgroundImage: 'url(' + prop.sp?.url + ')' }"
-  ></div>
+  <div class="bg" :style="{ backgroundImage: 'url(' + furnbgpath + ')' }">
+    <div
+      @touchstart="clickfurn"
+      class="box"
+      :style="{ backgroundImage: 'url(' + prop.sp?.url + ')' }"
+    ></div>
+  </div>
 </template>
 
 <style scoped>
+.bg {
+  background-size: 100% 100%;
+  width: 53px;
+  height: 53px;
+}
 .box {
   width: 50px;
   height: 50px;
   background-image: url("@/assets/furnbg.png");
   background-size: 100% 100%;
   transform: rotate(90deg);
-  margin: 2px 2px;
+  margin: 6px 2px;
   align-items: center;
 }
 </style>

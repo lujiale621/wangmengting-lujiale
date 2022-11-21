@@ -81,6 +81,7 @@ onMounted(() => {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding-right: 5px;
   transform: translate(-50%, -50%);
 }
 

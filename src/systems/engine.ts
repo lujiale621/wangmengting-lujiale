@@ -50,6 +50,9 @@ export const PixiEngine = {
       resolution: 1,
     });
   },
+  getPixiApp() {
+    return PixiApp;
+  },
   getCanvas() {
     return PixiApp.view;
   },
@@ -96,13 +99,13 @@ export const PixiEngine = {
     );
     spritelist.push(xiaomihuobj);
     xiaomihu.name = "xiaomihu";
-    xiaomihu.angle = 90;
+    // xiaomihu.angle = 90;
     xiaomihu.width = scwidth / 6;
     xiaomihu.height = scwidth / 6;
-    xiaomihu.position = {
-      x: background.height / 2 - 90,
-      y: canvlength - 60,
-    };
+    // xiaomihu.position = {
+    //   x: background.height / 2 - 90,
+    //   y: canvlength - 60,
+    // };
 
     xiaosongshu = new PIXI.Sprite(PIXI.Texture.from(xiaosongshuPath));
     const xiaosongshuobj: SpriteEntry = new SpriteEntry(
@@ -113,17 +116,32 @@ export const PixiEngine = {
     );
     spritelist.push(xiaosongshuobj);
     xiaosongshu.name = "xiaosongshu";
-    xiaosongshu.angle = 90;
+    // xiaosongshu.angle = 90;
     xiaosongshu.width = scwidth / 7;
     xiaosongshu.height = scwidth / 7;
-    xiaosongshu.position = {
+    // xiaosongshu.position = {
+    //   x: background.height / 2 - 90,
+    //   y: canvlength + 50,
+    // };
+    xiaomihuobj.spgroup.angle = 90;
+    xiaomihuobj.spgroup.width = scwidth / 6;
+    xiaomihuobj.spgroup.height = scwidth / 6;
+    xiaomihuobj.spgroup.position = {
       x: background.height / 2 - 90,
       y: canvlength + 50,
     };
+    xiaosongshuobj.spgroup.angle = 90;
+    xiaosongshuobj.spgroup.width = scwidth / 6;
+    xiaosongshuobj.spgroup.height = scwidth / 6;
+    xiaosongshuobj.spgroup.position = {
+      x: background.height / 2 - 90,
+      y: canvlength - 50,
+    };
     PixiApp.stage.addChild(background);
-    PixiApp.stage.addChild(xiaomihu);
-    PixiApp.stage.addChild(xiaosongshu);
-    console.log(PixiApp.stage.getChildIndex(xiaosongshu));
+    PixiApp.stage.addChild(xiaomihuobj.spgroup);
+    PixiApp.stage.addChild(xiaosongshuobj.spgroup);
+    xiaomihuobj.load();
+    xiaosongshuobj.load();
   },
   loadeventlisten() {
     xiaomihu.interactive = true;
