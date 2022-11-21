@@ -65,7 +65,7 @@ onMounted(() => {
   transform: translate(-50%, -50%);
   /* bottom: 0px;
   left: 0px; */
-  background-image: url("src/assets/swbg.png");
+  background-image: url("@/assets/swbg.png");
   background-size: 100% 100%;
   margin: auto;
   background-position: center;
