@@ -1,6 +1,9 @@
 import * as PIXI from "pixi.js";
 import { ImageResource, Resource } from "pixi.js";
 import { SpriteEntry } from "./obj";
+import { Spritesheet, AnimatedSprite, Assets } from "pixi.js";
+import fireplacePath from "@/assets/fireplace/fireplace.png";
+import fireplacePathJS from "@/assets/fireplace/fireplace.json";
 
 import xiaomihuPath from "@/assets/xiaomihu.png";
 import xiaosongshuPath from "@/assets/xiaosongshu.png";
@@ -56,7 +59,7 @@ export const PixiEngine = {
   getCanvas() {
     return PixiApp.view;
   },
-  loadobj(scwidth: number, scheight: number) {
+  async loadobj(scwidth: number, scheight: number) {
     console.log("setup");
     console.log("windowwidth:", scwidth);
     console.log("windowheight:", scheight);
@@ -90,6 +93,27 @@ export const PixiEngine = {
       y: -poivlength,
     };
     console.log("x需要偏移量:", pohilength, "y需要偏移量:", poivlength);
+    //壁炉
+
+    const sheet = new Spritesheet(
+      PIXI.Texture.from(fireplacePath),
+      fireplacePathJS
+    );
+    // const sheet = Assets.load("assets/spritesheet.json");
+
+    await sheet.parse();
+    const ansp = new AnimatedSprite(sheet.animations["fireplace_wps图片"]);
+    ansp.angle = 90;
+    ansp.width = scwidth / 3;
+    ansp.height = scwidth / 3;
+    ansp.position = {
+      x: background.height / 2 + 10,
+      y: canvlength + 230,
+    };
+    ansp.animationSpeed = 0.1;
+    ansp.loop = true;
+    ansp.gotoAndPlay(0);
+    console.log("Spritesheet ready to use!");
     xiaomihu = new PIXI.Sprite(PIXI.Texture.from(xiaomihuPath));
     const xiaomihuobj: SpriteEntry = new SpriteEntry(
       xiaomihu,
@@ -137,9 +161,11 @@ export const PixiEngine = {
       x: background.height / 2 - 90,
       y: canvlength - 50,
     };
+
     PixiApp.stage.addChild(background);
     PixiApp.stage.addChild(xiaomihuobj.spgroup);
     PixiApp.stage.addChild(xiaosongshuobj.spgroup);
+    PixiApp.stage.addChild(ansp);
     xiaomihuobj.load();
     xiaosongshuobj.load();
   },
