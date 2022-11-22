@@ -1,0 +1,577 @@
+{
+  "frames": {
+    "070e35bd86e25290dac7286ec8e63563_wps图片_1.png": {
+      "frame": { "x": 1, "y": 1, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_2.png": {
+      "frame": { "x": 623, "y": 1054, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_3.png": {
+      "frame": { "x": 623, "y": 1756, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_4.png": {
+      "frame": { "x": 3111, "y": 703, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_5.png": {
+      "frame": { "x": 1867, "y": 2107, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_6.png": {
+      "frame": { "x": 1245, "y": 3160, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_7.png": {
+      "frame": { "x": 3111, "y": 2809, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_8.png": {
+      "frame": { "x": 2489, "y": 3511, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_9.png": {
+      "frame": { "x": 3111, "y": 3160, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_10.png": {
+      "frame": { "x": 1, "y": 352, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_11.png": {
+      "frame": { "x": 623, "y": 1, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_12.png": {
+      "frame": { "x": 1, "y": 703, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_13.png": {
+      "frame": { "x": 623, "y": 352, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_14.png": {
+      "frame": { "x": 1245, "y": 1, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_15.png": {
+      "frame": { "x": 1, "y": 1054, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_16.png": {
+      "frame": { "x": 623, "y": 703, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_17.png": {
+      "frame": { "x": 1245, "y": 352, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_18.png": {
+      "frame": { "x": 1867, "y": 1, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_19.png": {
+      "frame": { "x": 1, "y": 1405, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_20.png": {
+      "frame": { "x": 1245, "y": 703, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_21.png": {
+      "frame": { "x": 1867, "y": 352, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_22.png": {
+      "frame": { "x": 2489, "y": 1, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_23.png": {
+      "frame": { "x": 1, "y": 1756, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_24.png": {
+      "frame": { "x": 623, "y": 1405, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_25.png": {
+      "frame": { "x": 1245, "y": 1054, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_26.png": {
+      "frame": { "x": 1867, "y": 703, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_27.png": {
+      "frame": { "x": 2489, "y": 352, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_28.png": {
+      "frame": { "x": 3111, "y": 1, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_29.png": {
+      "frame": { "x": 1, "y": 2107, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_30.png": {
+      "frame": { "x": 1245, "y": 1405, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_31.png": {
+      "frame": { "x": 1867, "y": 1054, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_32.png": {
+      "frame": { "x": 2489, "y": 703, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_33.png": {
+      "frame": { "x": 3111, "y": 352, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_34.png": {
+      "frame": { "x": 3733, "y": 1, "w": 620, "h": 349 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_35.png": {
+      "frame": { "x": 1, "y": 2458, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_36.png": {
+      "frame": { "x": 623, "y": 2107, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_37.png": {
+      "frame": { "x": 1245, "y": 1756, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_38.png": {
+      "frame": { "x": 1867, "y": 1405, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_39.png": {
+      "frame": { "x": 2489, "y": 1054, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_40.png": {
+      "frame": { "x": 1, "y": 2809, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_41.png": {
+      "frame": { "x": 623, "y": 2458, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_42.png": {
+      "frame": { "x": 1245, "y": 2107, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_43.png": {
+      "frame": { "x": 1867, "y": 1756, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_44.png": {
+      "frame": { "x": 2489, "y": 1405, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_45.png": {
+      "frame": { "x": 3111, "y": 1054, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_46.png": {
+      "frame": { "x": 3733, "y": 623, "w": 620, "h": 349 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_47.png": {
+      "frame": { "x": 1, "y": 3160, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_48.png": {
+      "frame": { "x": 623, "y": 2809, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_49.png": {
+      "frame": { "x": 1245, "y": 2458, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_50.png": {
+      "frame": { "x": 2489, "y": 1756, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_51.png": {
+      "frame": { "x": 3111, "y": 1405, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_52.png": {
+      "frame": { "x": 1, "y": 3511, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_53.png": {
+      "frame": { "x": 623, "y": 3160, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_54.png": {
+      "frame": { "x": 1245, "y": 2809, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_55.png": {
+      "frame": { "x": 1867, "y": 2458, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_56.png": {
+      "frame": { "x": 2489, "y": 2107, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_57.png": {
+      "frame": { "x": 3111, "y": 1756, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_58.png": {
+      "frame": { "x": 3733, "y": 1245, "w": 620, "h": 349 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_59.png": {
+      "frame": { "x": 623, "y": 3511, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_60.png": {
+      "frame": { "x": 1867, "y": 2809, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_61.png": {
+      "frame": { "x": 2489, "y": 2458, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_62.png": {
+      "frame": { "x": 3111, "y": 2107, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_63.png": {
+      "frame": { "x": 1245, "y": 3511, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_64.png": {
+      "frame": { "x": 1867, "y": 3160, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_65.png": {
+      "frame": { "x": 2489, "y": 2809, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_66.png": {
+      "frame": { "x": 3111, "y": 2458, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_67.png": {
+      "frame": { "x": 3733, "y": 1867, "w": 620, "h": 349 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_68.png": {
+      "frame": { "x": 1867, "y": 3511, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_69.png": {
+      "frame": { "x": 2489, "y": 3160, "w": 620, "h": 349 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    },
+    "070e35bd86e25290dac7286ec8e63563_wps图片_70.png": {
+      "frame": { "x": 3733, "y": 2489, "w": 620, "h": 349 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 620, "h": 349 },
+      "sourceSize": { "w": 620, "h": 349 }
+    }
+  },
+  "animations": {
+    "070e35bd86e25290dac7286ec8e63563_wps图片": [
+      "070e35bd86e25290dac7286ec8e63563_wps图片_1.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_2.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_3.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_4.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_5.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_6.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_7.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_8.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_9.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_10.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_11.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_12.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_13.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_14.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_15.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_16.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_17.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_18.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_19.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_20.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_21.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_22.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_23.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_24.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_25.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_26.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_27.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_28.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_29.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_30.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_31.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_32.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_33.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_34.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_35.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_36.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_37.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_38.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_39.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_40.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_41.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_42.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_43.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_44.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_45.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_46.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_47.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_48.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_49.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_50.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_51.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_52.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_53.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_54.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_55.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_56.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_57.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_58.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_59.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_60.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_61.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_62.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_63.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_64.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_65.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_66.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_67.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_68.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_69.png",
+      "070e35bd86e25290dac7286ec8e63563_wps图片_70.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "picture.png",
+    "format": "RGBA8888",
+    "size": { "w": 4083, "h": 3861 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:6e9d32921b93702f672c01a614451b1d:c63c9ec622402e06ecd3ae9878f744cb:7550ef3666493a31ed3e3c4fc207c026$"
+  }
+}

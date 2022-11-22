@@ -59,7 +59,7 @@ export class SpriteEntry implements Action {
     right.anchor.x = 0.5;
     right.anchor.y = 0.5;
     right.width = boxwidth / 4;
-    right.height = boxheight / 4;
+    right.height = boxwidth / 4;
     right.interactive = true;
     right.position = {
       x: this.sprite!.position._x - boxwidth / 2,
@@ -74,7 +74,7 @@ export class SpriteEntry implements Action {
     close.anchor.x = 0.5;
     close.anchor.y = 0.5;
     close.width = boxwidth / 4;
-    close.height = boxheight / 4;
+    close.height = boxwidth / 4;
     close.interactive = true;
     close.position = {
       x: this.sprite!.position._x + boxwidth / 2,
@@ -118,7 +118,6 @@ export class SpriteEntry implements Action {
                 this.move(spx + dx, spy + dy);
               }
               startPoint = { x: event.data.global.x, y: event.data.global.y };
-              // this.move(e.x + width / 2, e.y - width / 2);
             }
           }
         })

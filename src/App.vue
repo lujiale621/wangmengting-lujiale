@@ -2,14 +2,14 @@
 import { onMounted, ref } from "vue";
 import type { Ref } from "vue";
 import { PixiEngine } from "./systems/engine";
-// import * as PIXI from "pixi.js";
+import { Spritesheet, AnimatedSprite } from "pixi.js";
 import { Sound } from "@pixi/sound";
 import bag from "./components/bag.vue";
 import type { SpriteEntry } from "./systems/obj";
 import soundPath from "@/assets/bg.mp3";
 import musicopenPath from "@/assets/musicopen.png";
 import musicclosePath from "@/assets/musicclose.png";
-
+import * as PIXI from "pixi.js";
 import furSet from "@/assets/set.png";
 import furSave from "@/assets/save.png";
 
@@ -60,6 +60,7 @@ onMounted(async () => {
   } else {
     console.log("竖屏");
   }
+
   sound = Sound.from({
     url: soundPath,
     volume: 0.25,
@@ -76,6 +77,7 @@ onMounted(async () => {
   const canvasInfo = PixiEngine.getCanvas();
   // @ts-ignore
   canvas.value?.appendChild(canvasInfo);
+
   PixiEngine.loadobj(window.screen.width, window.screen.height);
   PixiEngine.tickinit();
   PixiEngine.loadeventlisten();

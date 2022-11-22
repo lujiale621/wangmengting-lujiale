@@ -1,0 +1,215 @@
+{"frames": {
+
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_1.png":
+{
+	"frame": {"x":1,"y":1596,"w":531,"h":252},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":47,"y":186,"w":531,"h":252},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_2.png":
+{
+	"frame": {"x":1605,"y":1,"w":532,"h":252},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":186,"w":532,"h":252},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_3.png":
+{
+	"frame": {"x":535,"y":1061,"w":532,"h":251},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":187,"w":532,"h":251},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_4.png":
+{
+	"frame": {"x":534,"y":1552,"w":532,"h":251},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":187,"w":532,"h":251},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_5.png":
+{
+	"frame": {"x":1604,"y":535,"w":532,"h":253},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":185,"w":532,"h":253},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_6.png":
+{
+	"frame": {"x":1069,"y":788,"w":533,"h":255},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":183,"w":533,"h":255},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_7.png":
+{
+	"frame": {"x":1069,"y":529,"w":533,"h":257},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":181,"w":533,"h":257},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_8.png":
+{
+	"frame": {"x":1,"y":1074,"w":532,"h":259},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":179,"w":532,"h":259},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_9.png":
+{
+	"frame": {"x":535,"y":799,"w":531,"h":260},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":176,"w":531,"h":260},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_10.png":
+{
+	"frame": {"x":1,"y":810,"w":532,"h":262},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":174,"w":532,"h":262},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_11.png":
+{
+	"frame": {"x":535,"y":538,"w":532,"h":259},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":172,"w":532,"h":259},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_12.png":
+{
+	"frame": {"x":1070,"y":266,"w":533,"h":261},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":170,"w":533,"h":261},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_13.png":
+{
+	"frame": {"x":1070,"y":1,"w":533,"h":263},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":168,"w":533,"h":263},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_14.png":
+{
+	"frame": {"x":1,"y":542,"w":532,"h":266},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":165,"w":532,"h":266},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_15.png":
+{
+	"frame": {"x":1,"y":1,"w":533,"h":268},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":163,"w":533,"h":268},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_16.png":
+{
+	"frame": {"x":536,"y":1,"w":532,"h":268},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":161,"w":532,"h":268},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_17.png":
+{
+	"frame": {"x":1,"y":271,"w":532,"h":269},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":158,"w":532,"h":269},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_18.png":
+{
+	"frame": {"x":535,"y":271,"w":532,"h":265},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":161,"w":532,"h":265},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_19.png":
+{
+	"frame": {"x":1,"y":1335,"w":531,"h":259},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":165,"w":531,"h":259},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_26.png":
+{
+	"frame": {"x":1069,"y":1045,"w":533,"h":241},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":179,"w":533,"h":241},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_27.png":
+{
+	"frame": {"x":1068,"y":1771,"w":531,"h":236},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":187,"w":531,"h":236},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_28.png":
+{
+	"frame": {"x":535,"y":1314,"w":532,"h":236},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":190,"w":532,"h":236},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_29.png":
+{
+	"frame": {"x":1069,"y":1531,"w":532,"h":238},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":190,"w":532,"h":238},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_30.png":
+{
+	"frame": {"x":1069,"y":1288,"w":533,"h":241},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":190,"w":533,"h":241},
+	"sourceSize": {"w":620,"h":620}
+},
+"c67aa0725e8e74bd2ccfde03b375020b_wps图片_31.png":
+{
+	"frame": {"x":1604,"y":1069,"w":532,"h":242},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":191,"w":532,"h":242},
+	"sourceSize": {"w":620,"h":620}
+}},
+"animations": {
+	"c67aa0725e8e74bd2ccfde03b375020b_wps图片": ["c67aa0725e8e74bd2ccfde03b375020b_wps图片_1.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_2.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_3.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_4.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_5.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_6.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_7.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_8.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_9.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_10.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_11.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_12.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_13.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_14.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_15.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_16.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_17.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_18.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_19.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_26.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_27.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_28.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_29.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_30.png","c67aa0725e8e74bd2ccfde03b375020b_wps图片_31.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "xinixn.png",
+	"format": "RGBA8888",
+	"size": {"w":1858,"h":2008},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:dab93a1ebb14f89c26e43d8ee06e60dc:74e3bdced12641b5884ed05aac1a0076:6fbed82fb09ec960adcd54c93d831816$"
+}
+}
