@@ -1,10 +1,11 @@
 import * as PIXI from "pixi.js";
-import { ImageResource, Resource } from "pixi.js";
+import { ImageResource, Resource, Sprite } from "pixi.js";
 import { SpriteEntry } from "./obj";
 import { Spritesheet, AnimatedSprite, Assets } from "pixi.js";
 import fireplacePath from "@/assets/fireplace/fireplace.png";
+import biluPath from "@/assets/fireplace/bilu.png";
 import fireplacePathJS from "@/assets/fireplace/fireplace.json";
-
+import guiziPath from "@/assets/guizi.png";
 import xiaomihuPath from "@/assets/xiaomihu.png";
 import xiaosongshuPath from "@/assets/xiaosongshu.png";
 import backgroundPath from "@/assets/background.png";
@@ -12,7 +13,8 @@ import backgroundPath from "@/assets/background.png";
 const spritelist: Array<SpriteEntry> = new Array<SpriteEntry>();
 let PixiApp: PIXI.Application;
 const TextureCache = PIXI.utils.TextureCache;
-
+let wr = 0;
+let hr = 0;
 const percent = 50;
 const currentTime = 0;
 let backgroundlength: number;
@@ -38,8 +40,22 @@ let backgroundheightcenter: number;
 let background: PIXI.Sprite;
 let xiaomihu: PIXI.Sprite;
 let xiaosongshu: PIXI.Sprite;
+let guizi: PIXI.Sprite;
+let bgheigth: number;
+let bgwidth: number;
+let scwidth: number;
+let scheight: number;
 export const PixiEngine = {
   init(width: number, height: number) {
+    scwidth = width;
+    scheight = height;
+    //背景高度是屏幕高度 是背景图片的宽度
+    bgheigth = width * 3.6;
+    bgwidth = width * 1.2;
+    const da: Array<number> = this.scalewh(scwidth, scheight);
+    wr = da[0];
+    hr = da[1];
+    console.log("屏幕伸缩比-x：", wr, "y：", hr);
     if (typeof PixiApp !== "undefined") {
       PixiApp.destroy();
     }
@@ -59,6 +75,165 @@ export const PixiEngine = {
   getCanvas() {
     return PixiApp.view;
   },
+  //把定义的平面位置映射到适应屏幕位置
+  transcreentocenternpos(x: number, y: number) {
+    const width = 414;
+    const height = 896;
+    const x1 = x - width / 2;
+    const y1 = y - height / 2;
+    console.log(
+      "转换前屏幕大小x：",
+      width,
+      "y:",
+      height,
+      "转换前背景图大小x：",
+      width * 1.2,
+      "y：",
+      height * 1.6633928571428573
+    );
+    console.log(
+      "转换后屏幕大小x：",
+      scwidth,
+      "y:",
+      scheight,
+      "转换后背景图大小x：",
+      bgwidth,
+      "y：",
+      bgheigth
+    );
+
+    console.log(
+      "转换前屏幕坐标x:",
+      x,
+      "y:",
+      y,
+      "转换后中心坐标x:",
+      x1,
+      "y:",
+      y1
+    );
+    const x2 = x1 * wr;
+    const y2 = y1 * hr;
+    console.log(
+      "中心坐标伸前x:",
+      x1,
+      "y:",
+      y1,
+      "中心坐标伸后中心坐标x:",
+      x2,
+      "y:",
+      y2
+    );
+    const x3 = x2 + scwidth / 2;
+    const y3 = y2 + scheight / 2;
+    console.log(
+      "中心坐标伸后转换前x:",
+      x2,
+      "y:",
+      y2,
+      "中心坐标伸后转换后x:",
+      x3,
+      "y:",
+      y3
+    );
+    return [x3, y3];
+  },
+  //通过背景图的伸缩获取伸缩比 wr=hr
+  scalewh(windowwidth: number, windowheight: number) {
+    const width = 414;
+    const height = 896;
+    let wr = 0;
+    let hr = 0;
+    wr = bgwidth / (width * 1.2);
+    hr = bgheigth / (height * 1.6633928571428573);
+    console.log(
+      "背景宽度：",
+      bgwidth,
+      "高度：",
+      bgheigth,
+      "映射画布宽度：",
+      width,
+      "高度：",
+      height,
+      "映射画布的背景宽度：",
+      width * 1.2,
+      "高度：",
+      height * 1.6633928571428573
+    );
+    return [wr, hr];
+  },
+  //设置精灵位置 x，y原始坐标
+  spsetpos(x: number, y: number, sp: SpriteEntry) {
+    console.log("开始转换精灵坐标-精灵：", sp.name);
+    const da = this.transcreentocenternpos(x, y);
+
+    sp.spgroup.position = {
+      x: da[0],
+      y: da[1],
+    };
+  },
+  getlocalpos(x: number, y: number) {
+    const width = 414;
+    const height = 896;
+    const x1 = x - scwidth / 2;
+    const y1 = y - scheight / 2;
+    console.log(
+      "转换前屏幕大小x：",
+      width,
+      "y:",
+      height,
+      "转换前背景图大小x：",
+      width * 1.2,
+      "y：",
+      height * 1.6633928571428573
+    );
+    console.log(
+      "转换后屏幕大小x：",
+      scwidth,
+      "y:",
+      scheight,
+      "转换后背景图大小x：",
+      bgwidth,
+      "y：",
+      bgheigth
+    );
+
+    console.log(
+      "转换前屏幕坐标x:",
+      x,
+      "y:",
+      y,
+      "转换后中心坐标x:",
+      x1,
+      "y:",
+      y1
+    );
+    const x2 = x1 / wr;
+    const y2 = y1 / hr;
+    console.log(
+      "中心坐标缩前x:",
+      x1,
+      "y:",
+      y1,
+      "中心坐标缩后中心坐标x:",
+      x2,
+      "y:",
+      y2
+    );
+    const x3 = x2 + width / 2;
+    const y3 = y2 + height / 2;
+    console.log(
+      "中心坐标缩后转换前x:",
+      x2,
+      "y:",
+      y2,
+      "中心坐标缩后转换后x:",
+      x3,
+      "y:",
+      y3
+    );
+    return [x3, y3];
+  },
   loadobj(scwidth: number, scheight: number) {
     console.log("setup");
     console.log("windowwidth:", scwidth);
@@ -66,8 +241,8 @@ export const PixiEngine = {
     background = new PIXI.Sprite(PIXI.Texture.from(backgroundPath));
     background.name = "background";
     background.angle = 90;
-    background.width = scwidth * 3.6;
-    background.height = scwidth * 1.2;
+    background.width = bgheigth;
+    background.height = bgwidth;
     //背景图长度
     backgroundlength = background.width;
     //背景图宽度
@@ -103,71 +278,92 @@ export const PixiEngine = {
 
     sheet.parse();
     const ansp = new AnimatedSprite(sheet.animations["fireplace_wps图片"]);
-    ansp.angle = 90;
-    ansp.width = scwidth / 3;
-    ansp.height = scwidth / 3;
-    ansp.position = {
-      x: background.height / 2 + 10,
-      y: canvlength + 230,
-    };
-    ansp.animationSpeed = 0.1;
+    ansp.animationSpeed = 0.2;
+    ansp.interactive = true;
     ansp.loop = true;
     ansp.gotoAndPlay(0);
+    const fireplaceobj: SpriteEntry = new SpriteEntry(
+      ansp,
+      biluPath,
+      "fireplace",
+      69 * wr
+    );
+
+    spritelist.push(fireplaceobj);
     console.log("Spritesheet ready to use!");
+    //柜子
+    guizi = new PIXI.Sprite(PIXI.Texture.from(guiziPath));
+    const guiziobj: SpriteEntry = new SpriteEntry(
+      guizi,
+      guiziPath,
+      "guizi",
+      138 * wr
+    );
+    guizi.interactive = true;
+    spritelist.push(guiziobj);
+    guizi.name = "guizi";
+    // xiaomihu.angle = 90;
+    guizi.width = 138 * wr;
+    guizi.height = 138 * wr;
+
     xiaomihu = new PIXI.Sprite(PIXI.Texture.from(xiaomihuPath));
     const xiaomihuobj: SpriteEntry = new SpriteEntry(
       xiaomihu,
       xiaomihuPath,
       "xiaomihu",
-      scwidth / 6
+      69 * wr
     );
     spritelist.push(xiaomihuobj);
     xiaomihu.name = "xiaomihu";
     // xiaomihu.angle = 90;
-    xiaomihu.width = scwidth / 6;
-    xiaomihu.height = scwidth / 6;
-    // xiaomihu.position = {
-    //   x: background.height / 2 - 90,
-    //   y: canvlength - 60,
-    // };
+    xiaomihu.width = 69 * wr;
+    xiaomihu.height = 69 * wr;
 
     xiaosongshu = new PIXI.Sprite(PIXI.Texture.from(xiaosongshuPath));
     const xiaosongshuobj: SpriteEntry = new SpriteEntry(
       xiaosongshu,
       xiaosongshuPath,
       "xiaosongshu",
-      scwidth / 6
+      69 * wr
     );
+    //位置中y坐标为横屏横坐标 x坐标为屏幕宽度
     spritelist.push(xiaosongshuobj);
     xiaosongshu.name = "xiaosongshu";
     // xiaosongshu.angle = 90;
-    xiaosongshu.width = scwidth / 7;
-    xiaosongshu.height = scwidth / 7;
-    // xiaosongshu.position = {
-    //   x: background.height / 2 - 90,
-    //   y: canvlength + 50,
-    // };
+    xiaosongshu.width = 59 * wr;
+    xiaosongshu.height = 59 * wr;
+    guiziobj.spgroup.angle = 90;
+    guiziobj.spgroup.width = 138 * wr;
+    guiziobj.spgroup.height = 138 * wr;
+    this.spsetpos(180, 700, guiziobj);
+    fireplaceobj.spgroup.angle = 90;
+    fireplaceobj.spgroup.width = 138 * wr;
+    fireplaceobj.spgroup.height = 138 * wr;
+    this.spsetpos(150, 500, fireplaceobj);
     xiaomihuobj.spgroup.angle = 90;
-    xiaomihuobj.spgroup.width = scwidth / 6;
-    xiaomihuobj.spgroup.height = scwidth / 6;
-    xiaomihuobj.spgroup.position = {
-      x: background.height / 2 - 90,
-      y: canvlength + 50,
-    };
+    xiaomihuobj.spgroup.width = 69 * wr;
+    xiaomihuobj.spgroup.height = 69 * wr;
+    this.spsetpos(75, 250, xiaomihuobj);
     xiaosongshuobj.spgroup.angle = 90;
-    xiaosongshuobj.spgroup.width = scwidth / 6;
-    xiaosongshuobj.spgroup.height = scwidth / 6;
-    xiaosongshuobj.spgroup.position = {
-      x: background.height / 2 - 90,
-      y: canvlength - 50,
-    };
-
+    xiaosongshuobj.spgroup.width = 69 * wr;
+    xiaosongshuobj.spgroup.height = 69 * wr;
+    this.spsetpos(75, 330, xiaosongshuobj);
     PixiApp.stage.addChild(background);
     PixiApp.stage.addChild(xiaomihuobj.spgroup);
     PixiApp.stage.addChild(xiaosongshuobj.spgroup);
-    PixiApp.stage.addChild(ansp);
+    PixiApp.stage.addChild(fireplaceobj.spgroup);
+    PixiApp.stage.addChild(guiziobj.spgroup);
     xiaomihuobj.load();
     xiaosongshuobj.load();
+    fireplaceobj.load();
+    guiziobj.load();
+    console.log("精灵当前屏幕位置:", xiaomihuobj.spgroup.position);
+    console.log(
+      "精灵映射位置 x:",
+      xiaomihuobj.spgroup.getGlobalPosition().x / wr,
+      "y:",
+      xiaomihuobj.spgroup.getGlobalPosition().y / hr
+    );
   },
   loadeventlisten() {
     xiaomihu.interactive = true;
@@ -267,20 +463,7 @@ export const PixiEngine = {
       console.log("touchend");
       dragFlag = false;
     });
-    // xiaomihu.on ("click",(event: any)=>{
-    //     console.log("click")
-    // })
 
-    // xiaomihu.on("mousemove",(event: any)=>{
-    //     console.log("mousemove")
-    // }),
-    // xiaosongshu.on ("click",(event: any)=>{
-    //     console.log("click")
-    // })
-
-    // xiaosongshu.on("mousemove",(event: any)=>{
-    //     console.log("mousemove")
-    // }),
     //缩放事件
     window.addEventListener("mousewheel", (event: any) => {
       console.log("mousewheel");

@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import type { Sprite } from "pixi.js";
+import type { Sprite, AnimatedSprite } from "pixi.js";
 import { PixiEngine } from "./engine";
 import rightPath from "@/assets/right.png";
 import closepath from "@/assets/close.png";
@@ -10,7 +10,7 @@ interface Action {
 
 export class SpriteEntry implements Action {
   public spgroup = new PIXI.Container();
-  public sprite: Sprite | undefined = undefined;
+  public sprite: Sprite | undefined | AnimatedSprite = undefined;
   public name: string = "";
   public url: string = "";
   public spriteset: boolean = false;
@@ -99,6 +99,7 @@ export class SpriteEntry implements Action {
       console.log("监听精灵拖动事件");
       this.spgroup
         .on("touchstart", (event) => {
+          console.log("touchstart");
           if (this.spriteset) {
             this.isDragging = true;
             startPoint = { x: event.data.global.x, y: event.data.global.y };
@@ -130,7 +131,12 @@ export class SpriteEntry implements Action {
     }
   }
 
-  constructor(sprite: Sprite, url: string, name: string, width: number) {
+  constructor(
+    sprite: Sprite | AnimatedSprite,
+    url: string,
+    name: string,
+    width: number
+  ) {
     this.sprite = sprite;
     this.spgroup.addChild(this.sprite);
     this.name = name;
