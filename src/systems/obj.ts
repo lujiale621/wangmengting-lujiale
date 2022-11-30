@@ -1,13 +1,30 @@
 import * as PIXI from "pixi.js";
+import { assist } from "./assist";
 import type { Sprite, AnimatedSprite } from "pixi.js";
 import { PixiEngine } from "./engine";
 import rightPath from "@/assets/right.png";
 import closepath from "@/assets/close.png";
+import { Pixihttp } from "./http";
 let startPoint: any;
+let wr = 0;
 interface Action {
   move(x: number, y: number): void;
 }
-
+export class HttpMsg {
+  public data: string = "null";
+  public msg: string = "null";
+  constructor() {}
+}
+export class SpObj {
+  public name: string = "asdad3";
+  public url: string = "Blue Train";
+  public width: number = 1;
+  public height: number = 1;
+  public x: number = 1;
+  public y: number = 1;
+  public visable: boolean = true;
+  constructor() {}
+}
 export class SpriteEntry implements Action {
   public spgroup = new PIXI.Container();
   public sprite: Sprite | undefined | AnimatedSprite = undefined;
@@ -15,6 +32,10 @@ export class SpriteEntry implements Action {
   public url: string = "";
   public spriteset: boolean = false;
   private rectangle = new PIXI.Graphics();
+  public mapx: number = 0;
+  public mapy: number = 0;
+  public mapwidth: number = 0;
+  public mapheight: number = 0;
   public setspedit(flag: boolean) {
     this.spriteset = flag;
     if (flag) {
@@ -26,6 +47,8 @@ export class SpriteEntry implements Action {
   }
   //加载完纹理后调用此函数
   public load() {
+    //初始化基本信息
+
     //初始化矩形框
     this.editframeinit();
   }
@@ -69,6 +92,7 @@ export class SpriteEntry implements Action {
       console.log("tap");
       this.rectangle.visible = false;
       this.setspedit(false);
+      Pixihttp.updatasprite(this);
     });
     const close = new PIXI.Sprite(PIXI.Texture.from(closepath));
     close.anchor.x = 0.5;
@@ -89,7 +113,7 @@ export class SpriteEntry implements Action {
     spgroup.addChild(this.sprite!);
     spgroup.addChild(this.rectangle);
     PixiEngine.getPixiApp().stage.addChild(spgroup);
-    console.log("矩形框初始化");
+    console.log("矩形框和精灵初始化");
     this.rectangle.visible = false;
   }
   private isDragging = false;
@@ -129,20 +153,42 @@ export class SpriteEntry implements Action {
         });
     }
   }
+  initinfo() {
+    wr = PixiEngine.getwr();
+    console.log("beforeinitinfo:", this);
+    this.spgroup.angle = 90;
+    this.sprite!.width = this.mapwidth * wr;
+    this.sprite!.height = this.mapheight * wr;
+    this.spgroup.width = this.mapwidth * wr;
+    this.spgroup.height = this.mapheight * wr;
+    assist.spsetpos(this.mapx, this.mapy, this);
+    console.log("afterinitinfo:", this);
+  }
 
   constructor(
     sprite: Sprite | AnimatedSprite,
     url: string,
     name: string,
-    width: number
+    width: number,
+    mapx: number,
+    mapy: number,
+    mapwidth: number,
+    mapheight: number
   ) {
     this.sprite = sprite;
     this.spgroup.addChild(this.sprite);
+    this.spgroup.visible = false;
     this.name = name;
+    this.spgroup.name = name;
     this.url = url;
+    this.mapx = mapx;
+    this.mapy = mapy;
+    this.mapwidth = mapwidth;
+    this.mapheight = mapheight;
     this.spriteset = false;
     this.init_drag(width);
     sprite!.anchor.x = 0.5;
     sprite!.anchor.y = 0.5;
+    this.initinfo();
   }
 }

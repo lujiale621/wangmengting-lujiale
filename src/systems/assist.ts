@@ -1,6 +1,7 @@
-import type { SpriteEntry } from "./obj";
+import { type SpriteEntry, HttpMsg } from "./obj";
 import * as PIXI from "pixi.js";
 import { PixiEngine } from "./engine";
+import { Pixihttp } from "./http";
 let bgheigth: number;
 let bgwidth: number;
 let scwidth: number;
@@ -20,6 +21,7 @@ let poivlength: number;
 let pohilength: number;
 let dragFlag = false;
 import backgroundPath from "@/assets/background.png";
+import type { Container } from "pixi.js";
 let startPoint: any;
 let backgroundheightcenter: number;
 export const assist = {
@@ -192,6 +194,15 @@ export const assist = {
       y: da[1],
     };
   },
+  spcontainersetpos(x: number, y: number, sp: Container) {
+    console.log("开始转换精灵坐标-精灵：", sp.name);
+    const da = this.transcreentocenternpos(x, y);
+
+    sp.position = {
+      x: da[0],
+      y: da[1],
+    };
+  },
   backgroundinit() {
     PixiApp = PixiEngine.getPixiApp();
     console.log("setup");
@@ -320,6 +331,28 @@ export const assist = {
     background.on("touchend", () => {
       console.log("touchend");
       dragFlag = false;
+    });
+  },
+  toloadsp(sp: SpriteEntry) {
+    const results = Pixihttp.getspritebyname(sp.name);
+    const msgs: HttpMsg = new HttpMsg();
+    console.log("http-get-sprite:", sp.name, "return:", results);
+    results.then((res) => {
+      msgs.data = res.data.data;
+      msgs.msg = res.data.msg;
+      if (msgs.data == "null") {
+        console.log(msgs);
+        Pixihttp.postsprite(sp);
+      } else {
+        console.log(msgs.data);
+        const objstr = JSON.parse(JSON.stringify(msgs.data));
+        const sp: Container = PixiApp.stage.getChildByName(objstr.name);
+        this.spcontainersetpos(objstr.x, objstr.y, sp);
+        //更新精灵位置
+        sp.width = objstr.width * wr;
+        sp.height = objstr.height * wr;
+        sp.visible = objstr.visable;
+      }
     });
   },
 };

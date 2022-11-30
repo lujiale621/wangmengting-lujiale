@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { onMounted } from "vue";
 import BetterScroll from "better-scroll";
-import furniturncontein from "./furniturncontein.vue";
+import furniturncontein from "./Furniturncontein.vue";
 // init Swiper:
 import type { SpriteEntry } from "../systems/obj";
 // import { Sprite } from "pixi.js";
@@ -29,7 +29,7 @@ onMounted(() => {
     scrollY: true,
     click: true,
   });
-  console.log("onbagMounted");
+  console.log("onBagMounted");
 });
 </script>
 

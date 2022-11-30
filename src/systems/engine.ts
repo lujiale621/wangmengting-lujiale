@@ -12,6 +12,8 @@ import picturePath from "@/assets/picture/picture.png";
 import picturePath2 from "@/assets/picture/picture2.png";
 import picturePathJS from "@/assets/picture/picture.json";
 import { assist } from "./assist";
+import { Pixihttp } from "./http";
+import { tool } from "./tools";
 const spritelist: Array<SpriteEntry> = new Array<SpriteEntry>();
 let PixiApp: PIXI.Application;
 let wr = 0;
@@ -25,6 +27,7 @@ let scwidth: number;
 let scheight: number;
 export const PixiEngine = {
   init(width: number, height: number) {
+    this.testapi();
     //屏幕和位置参数的设置
     const da: Array<number> = assist.initpardata(width, height);
     scwidth = da[0];
@@ -47,13 +50,19 @@ export const PixiEngine = {
       resolution: 1,
     });
   },
+  testapi() {
+    Pixihttp.getspritedata();
+  },
+
   getPixiApp() {
     return PixiApp;
   },
   getCanvas() {
     return PixiApp.view;
   },
-  //加载精灵
+  getwr() {
+    return wr;
+  }, //加载精灵
   loadobj(scwidth: number, scheight: number) {
     assist.backgroundinit();
     //壁炉
@@ -72,10 +81,13 @@ export const PixiEngine = {
       ansp,
       biluPath,
       "fireplace",
-      69 * wr
+      69 * wr,
+      150,
+      500,
+      138,
+      138
     );
 
-    spritelist.push(fireplaceobj);
     //画
     const picsheet = new Spritesheet(
       PIXI.Texture.from(picturePath),
@@ -96,7 +108,11 @@ export const PixiEngine = {
       picansp,
       picturePath2,
       "picture",
-      138 * wr
+      138 * wr,
+      300,
+      400,
+      138,
+      90
     );
 
     // spritelist.push(picanspobj);
@@ -107,10 +123,14 @@ export const PixiEngine = {
       guizi,
       guiziPath,
       "guizi",
-      138 * wr
+      138 * wr,
+      180,
+      700,
+      138,
+      138
     );
     guizi.interactive = true;
-    spritelist.push(guiziobj);
+
     guizi.name = "guizi";
     // xiaomihu.angle = 90;
     guizi.width = 138 * wr;
@@ -121,9 +141,12 @@ export const PixiEngine = {
       xiaomihu,
       xiaomihuPath,
       "xiaomihu",
-      69 * wr
+      69 * wr,
+      75,
+      250,
+      69,
+      69
     );
-    spritelist.push(xiaomihuobj);
     xiaomihu.name = "xiaomihu";
     // xiaomihu.angle = 90;
     xiaomihu.width = 69 * wr;
@@ -134,41 +157,24 @@ export const PixiEngine = {
       xiaosongshu,
       xiaosongshuPath,
       "xiaosongshu",
-      69 * wr
+      69 * wr,
+      75,
+      330,
+      69,
+      69
     );
-    //位置中y坐标为横屏横坐标 x坐标为屏幕宽度
-    spritelist.push(xiaosongshuobj);
-    xiaosongshu.name = "xiaosongshu";
-    xiaosongshu.width = 59 * wr;
-    xiaosongshu.height = 59 * wr;
-    guiziobj.spgroup.angle = 90;
-    guiziobj.spgroup.width = 138 * wr;
-    guiziobj.spgroup.height = 138 * wr;
-    assist.spsetpos(180, 700, guiziobj);
 
-    picanspobj.spgroup.angle = 90;
-    picanspobj.spgroup.width = 138 * wr;
-    picanspobj.spgroup.height = 90 * wr;
-    assist.spsetpos(300, 400, picanspobj);
-
-    fireplaceobj.spgroup.angle = 90;
-    fireplaceobj.spgroup.width = 138 * wr;
-    fireplaceobj.spgroup.height = 138 * wr;
-    assist.spsetpos(150, 500, fireplaceobj);
-    xiaomihuobj.spgroup.angle = 90;
-    xiaomihuobj.spgroup.width = 69 * wr;
-    xiaomihuobj.spgroup.height = 69 * wr;
-    assist.spsetpos(75, 250, xiaomihuobj);
-    xiaosongshuobj.spgroup.angle = 90;
-    xiaosongshuobj.spgroup.width = 69 * wr;
-    xiaosongshuobj.spgroup.height = 69 * wr;
-    assist.spsetpos(75, 330, xiaosongshuobj);
-
-    xiaomihuobj.load();
-    xiaosongshuobj.load();
-    fireplaceobj.load();
-    guiziobj.load();
+    //信息初始化区
+    this.loadsp(fireplaceobj);
+    this.loadsp(guiziobj);
+    this.loadsp(xiaomihuobj);
+    this.loadsp(xiaosongshuobj);
     // picanspobj.load();
+  },
+  loadsp(spobj: SpriteEntry) {
+    assist.toloadsp(spobj);
+    spritelist.push(spobj);
+    spobj.load();
   },
   //加载监听器
   loadeventlisten() {
@@ -189,6 +195,10 @@ export const PixiEngine = {
   tickinit() {
     PixiApp.ticker.add((delta) => {
       // console.log("ricker");
+      const tag = tool.hitTestRectangle(
+        PixiApp.stage.getChildByName("xiaomihu"),
+        PixiApp.stage.getChildByName("xiaosongshu")
+      );
     });
   },
   getloadsprite() {

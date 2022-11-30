@@ -4,7 +4,7 @@ import type { Ref } from "vue";
 import { PixiEngine } from "./systems/engine";
 import { Spritesheet, AnimatedSprite } from "pixi.js";
 import { Sound } from "@pixi/sound";
-import bag from "./components/bag.vue";
+import bag from "./components/Bag.vue";
 import type { SpriteEntry } from "./systems/obj";
 import soundPath from "@/assets/bg.mp3";
 import musicopenPath from "@/assets/musicopen.png";
@@ -12,7 +12,7 @@ import musicclosePath from "@/assets/musicclose.png";
 import * as PIXI from "pixi.js";
 import furSet from "@/assets/set.png";
 import furSave from "@/assets/save.png";
-
+import { Pixihttp } from "./systems/http";
 // import furniturepath from "../src/assets/set.png"
 let sound: Sound;
 const canvas: Ref<Node | null> = ref(null);
@@ -46,10 +46,11 @@ const onsetfurniture = () => {
     for (let i = 0; i < spritelist.length; i++) {
       spritelist[i].setspedit(false);
       console.log("关闭精灵编辑状态：", spritelist[i]);
+      Pixihttp.updatasprite(spritelist[i]);
     }
-    //弹出家具选择框
-  } else {
     //关闭家具选择框
+  } else {
+    //弹出家具选择框
   }
 };
 onMounted(async () => {
