@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { onMounted } from "vue";
 import BetterScroll from "better-scroll";
-import furniturncontein from "./FurniturnContein.vue";
+import FurniturnContein from "./FurniturnContein.vue";
 // init Swiper:
 import type { SpriteEntry } from "../systems/obj";
 // import { Sprite } from "pixi.js";
@@ -43,7 +43,7 @@ onMounted(() => {
         <div class="wrapper">
           <ul class="content">
             <li v-for="spobj in splist" :key="spobj.name">
-              <furniturnContein :sp="spobj"></furniturnContein>
+              <FurniturnContein :sp="spobj"></FurniturnContein>
             </li>
           </ul>
         </div>
