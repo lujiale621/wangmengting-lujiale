@@ -11,49 +11,55 @@ const count = ref(0);
 // let spobj: SpriteEntry;
 const widtha = ref(1);
 const heightb = ref(1);
-let bs = new BetterScroll(".wrapper", {
-  movable: true,
-  zoom: true,
-  scrollY: true,
-  click: true,
-});
 
 defineProps<{ msg: string; splist: Array<SpriteEntry> }>();
 onMounted(() => {
   widtha.value = window.screen.width;
   heightb.value = window.screen.height;
   console.log(widtha.value);
+
   let bs = new BetterScroll(".wrapper", {
     movable: true,
-    zoom: true,
+    scrollbar: true,
+    // zoom: true,
     scrollY: true,
     click: true,
+    bounce: true,
+    observeDOM: true,
+    observeDOMImage: true,
   });
   console.log("onBagMounted");
+  let timer = setTimeout(() => {
+    //需要定时执行的代码
+    console.log("Hello World");
+    console.log("Hello World");
+  }, 3000);
 });
 </script>
 
 <template>
   <div
     :style="'width:' + '70' + 'px' + ';' + 'height:' + heightb + 'px'"
-    class="container"
+    class="wrapper"
   >
-    <div class="contenter">
+    <div class="cont">
       <div class="furniturn">
-        <div class="wrapper">
-          <ul class="content">
-            <li v-for="spobj in splist" :key="spobj.name">
-              <FurniturnContein :sp="spobj"></FurniturnContein>
-            </li>
-          </ul>
-        </div>
+        <ul class="content">
+          <li v-for="spobj in splist" :key="spobj.name">
+            <FurniturnContein :sp="spobj"></FurniturnContein>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.container {
+li {
+  margin: 0px;
+  list-style: none;
+}
+.wrapper {
   background-color: bisque;
 
   display: flex;
@@ -62,38 +68,33 @@ onMounted(() => {
   position: absolute;
   top: 50%;
   left: 35px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
   /* bottom: 0px;
   left: 0px; */
   background-image: url("@/assets/swbg.png");
   background-size: 100% 100%;
-  margin: auto;
+
   background-position: center;
 }
 
-.contenter {
+.cont {
   /* background-image: url("src/assets/swbg.png"); */
-  /* height: 100%;
-  width: 70px; */
+
   display: flex;
   position: absolute;
   background-size: 100% 100%;
-  position: absolute;
+
   top: 50%;
-  left: 50%;
+  left: 10%;
   padding-right: 5px;
   transform: translate(-50%, -50%);
 }
 
 .furniturn {
   width: 100%;
-
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
   align-items: center;
 }
 

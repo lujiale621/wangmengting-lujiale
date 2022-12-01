@@ -35,6 +35,16 @@ import caocongPathJS from "@/assets/caocong/caocong.json";
 import shizhongPath from "@/assets/shizhong/shizhong.png";
 import shizhongPathGIF from "@/assets/shizhong/shizhong.gif";
 import shizhongPathJS from "@/assets/shizhong/shizhong.json";
+import guoPath from "@/assets/guo/guo.png";
+import guoPathGIF from "@/assets/guo/guo.gif";
+import guoPathJS from "@/assets/guo/guo.json";
+
+import shuPath from "@/assets/shu/shu.png";
+import shuPathGIF from "@/assets/shu/shu.gif";
+import shuPathJS from "@/assets/shu/shu.json";
+import huapenPath from "@/assets/huapen/huapen.png";
+import huapenPathGIF from "@/assets/huapen/huapen.gif";
+import huapenPathJS from "@/assets/huapen/huapen.json";
 import { assist } from "./assist";
 import { Pixihttp } from "./http";
 import { tool } from "./tools";
@@ -89,6 +99,66 @@ export const PixiEngine = {
   }, //加载精灵
   loadobj(scwidth: number, scheight: number) {
     assist.backgroundinit();
+    //huapen
+    const huapensheet = new Spritesheet(
+      PIXI.Texture.from(huapenPath),
+      huapenPathJS
+    );
+    huapensheet.parse();
+    const huapensp = new AnimatedSprite(
+      huapensheet.animations["24afb299ff52c2481dfd0c991cb8d57a"]
+    );
+    huapensp.animationSpeed = 0.05;
+    huapensp.interactive = true;
+    huapensp.loop = true;
+    huapensp.gotoAndPlay(0);
+    const huapenobj: SpriteEntry = new SpriteEntry(
+      huapensp,
+      huapenPathGIF,
+      "huapen",
+      20,
+      200,
+      70,
+      70
+    );
+    //shu
+    const shusheet = new Spritesheet(PIXI.Texture.from(shuPath), shuPathJS);
+    shusheet.parse();
+    const shusp = new AnimatedSprite(
+      shusheet.animations["f31b4a9dae7041e171ce5a56dda5d8a"]
+    );
+    shusp.animationSpeed = 0.05;
+    shusp.interactive = true;
+    shusp.loop = true;
+    shusp.gotoAndPlay(0);
+    const shuobj: SpriteEntry = new SpriteEntry(
+      shusp,
+      shuPathGIF,
+      "shu",
+      50,
+      200,
+      70,
+      70
+    );
+    //guo
+    const guosheet = new Spritesheet(PIXI.Texture.from(guoPath), guoPathJS);
+    guosheet.parse();
+    const guosp = new AnimatedSprite(
+      guosheet.animations["2424c7ec7ae01964a42dd618c0ce5aa"]
+    );
+    guosp.animationSpeed = 0.05;
+    guosp.interactive = true;
+    guosp.loop = true;
+    guosp.gotoAndPlay(0);
+    const guoobj: SpriteEntry = new SpriteEntry(
+      guosp,
+      guoPathGIF,
+      "guo",
+      100,
+      200,
+      70,
+      70
+    );
     //时钟
     const shizhongsheet = new Spritesheet(
       PIXI.Texture.from(shizhongPath),
@@ -367,6 +437,9 @@ export const PixiEngine = {
     this.loadsp(xiaocaoobj);
     this.loadsp(caocongobj);
     this.loadsp(shizhongobj);
+    this.loadsp(guoobj);
+    this.loadsp(huapenobj);
+    this.loadsp(shuobj);
     // picanspobj.load();
   },
   loadsp(spobj: SpriteEntry) {
@@ -406,6 +479,9 @@ export const PixiEngine = {
       assist.sprebackregister(PixiApp.stage.getChildByName("xiaocao"));
       assist.sprebackregister(PixiApp.stage.getChildByName("caocong"));
       assist.sprebackregister(PixiApp.stage.getChildByName("shizhong"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("guo"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("huapen"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("shu"));
     });
   },
 
