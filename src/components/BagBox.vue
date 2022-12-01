@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { onMounted } from "vue";
 import BetterScroll from "better-scroll";
-import FurniturnContein from "./FurniturnContein.vue";
+import FurniturnContein from "@/components/FurniturnContein.vue";
 // init Swiper:
 import type { SpriteEntry } from "../systems/obj";
 // import { Sprite } from "pixi.js";
