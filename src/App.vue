@@ -4,7 +4,6 @@ import type { Ref } from "vue";
 import { PixiEngine } from "./systems/engine";
 import { Spritesheet, AnimatedSprite } from "pixi.js";
 import { Sound } from "@pixi/sound";
-import bag from "./components/BagBox.vue";
 import type { SpriteEntry } from "./systems/obj";
 import soundPath from "@/assets/bg.mp3";
 import musicopenPath from "@/assets/musicopen.png";
