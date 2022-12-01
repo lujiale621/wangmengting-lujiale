@@ -11,6 +11,30 @@ import xiaosongshuPath from "@/assets/xiaosongshu.png";
 import picturePath from "@/assets/picture/picture.png";
 import picturePath2 from "@/assets/picture/picture2.png";
 import picturePathJS from "@/assets/picture/picture.json";
+import wendujiPath from "@/assets/wenduji/wenduji.png";
+import wendujiPath2 from "@/assets/wenduji/wenduji2.png";
+import wendujiPathJS from "@/assets/wenduji/wenduji.json";
+import luohuaPath from "@/assets/luohua/luohua.png";
+import luohuaPathGIF from "@/assets/luohua/luohua.gif";
+import luohuaPathJS from "@/assets/luohua/luohua.json";
+import yinghuashuPath from "@/assets/yinghuashu/yinghuashu.png";
+import yinghuashuPathGIF from "@/assets/yinghuashu/yinghuashu.gif";
+import yinghuashuPathJS from "@/assets/yinghuashu/yinghuashu.json";
+import huaPath from "@/assets/hua/hua.png";
+import huaPathGIF from "@/assets/hua/hua.gif";
+import huaPathJS from "@/assets/hua/hua.json";
+import heyePath from "@/assets/heye/heye.png";
+import heyePathGIF from "@/assets/heye/heye.gif";
+import heyePathJS from "@/assets/heye/heye.json";
+import xiaocaoPath from "@/assets/xiaocao/xiaocao.png";
+import xiaocaoPathGIF from "@/assets/xiaocao/xiaocao.gif";
+import xiaocaoPathJS from "@/assets/xiaocao/xiaocao.json";
+import caocongPath from "@/assets/caocong/caocong.png";
+import caocongPathGIF from "@/assets/caocong/caocong.gif";
+import caocongPathJS from "@/assets/caocong/caocong.json";
+import shizhongPath from "@/assets/shizhong/shizhong.png";
+import shizhongPathGIF from "@/assets/shizhong/shizhong.gif";
+import shizhongPathJS from "@/assets/shizhong/shizhong.json";
 import { assist } from "./assist";
 import { Pixihttp } from "./http";
 import { tool } from "./tools";
@@ -65,6 +89,177 @@ export const PixiEngine = {
   }, //加载精灵
   loadobj(scwidth: number, scheight: number) {
     assist.backgroundinit();
+    //时钟
+    const shizhongsheet = new Spritesheet(
+      PIXI.Texture.from(shizhongPath),
+      shizhongPathJS
+    );
+    shizhongsheet.parse();
+    const shizhongsp = new AnimatedSprite(
+      shizhongsheet.animations["568c24782fd06ec7702575a324caccf"]
+    );
+    shizhongsp.animationSpeed = 0.005;
+    shizhongsp.interactive = true;
+    shizhongsp.loop = true;
+    shizhongsp.gotoAndPlay(0);
+    const shizhongobj: SpriteEntry = new SpriteEntry(
+      shizhongsp,
+      shizhongPathGIF,
+      "shizhong",
+      100,
+      100,
+      50,
+      50
+    );
+    //小草
+    const xiaocaosheet = new Spritesheet(
+      PIXI.Texture.from(xiaocaoPath),
+      xiaocaoPathJS
+    );
+    xiaocaosheet.parse();
+    const xiaocaosp = new AnimatedSprite(
+      xiaocaosheet.animations["3e72d2305d5b8bb138068391c68452b"]
+    );
+    xiaocaosp.animationSpeed = 0.05;
+    xiaocaosp.interactive = true;
+    xiaocaosp.loop = true;
+    xiaocaosp.gotoAndPlay(0);
+    const xiaocaoobj: SpriteEntry = new SpriteEntry(
+      xiaocaosp,
+      xiaocaoPathGIF,
+      "xiaocao",
+      250,
+      400,
+      100,
+      50
+    );
+    //草丛
+    const caocongsheet = new Spritesheet(
+      PIXI.Texture.from(caocongPath),
+      caocongPathJS
+    );
+    caocongsheet.parse();
+    const caocongsp = new AnimatedSprite(
+      caocongsheet.animations["5e3b4c18753c3b6f9125bc6ca3d5f79c"]
+    );
+    caocongsp.animationSpeed = 0.05;
+    caocongsp.interactive = true;
+    caocongsp.loop = true;
+    caocongsp.gotoAndPlay(0);
+    const caocongobj: SpriteEntry = new SpriteEntry(
+      caocongsp,
+      caocongPathGIF,
+      "caocong",
+      450,
+      100,
+      100,
+      100
+    );
+    //荷叶
+    const heyesheet = new Spritesheet(PIXI.Texture.from(heyePath), heyePathJS);
+    heyesheet.parse();
+    const heyesp = new AnimatedSprite(
+      heyesheet.animations["3d6cb1337a4516bbd5d425f2f7a05b"]
+    );
+    heyesp.animationSpeed = 0.05;
+    heyesp.interactive = true;
+    heyesp.loop = true;
+    heyesp.gotoAndPlay(0);
+    const heyeobj: SpriteEntry = new SpriteEntry(
+      heyesp,
+      heyePathGIF,
+      "heye",
+      350,
+      400,
+      100,
+      100
+    );
+    //花盆
+    const huasheet = new Spritesheet(PIXI.Texture.from(huaPath), huaPathJS);
+    huasheet.parse();
+    const huasp = new AnimatedSprite(
+      huasheet.animations["2a4437fb90f7169cb29a9ad86cfee13f"]
+    );
+    huasp.animationSpeed = 0.05;
+    huasp.interactive = true;
+    huasp.loop = true;
+    huasp.gotoAndPlay(0);
+    const huaobj: SpriteEntry = new SpriteEntry(
+      huasp,
+      huaPathGIF,
+      "hua",
+      250,
+      300,
+      100,
+      100
+    );
+    //樱花树
+    const yinghuashusheet = new Spritesheet(
+      PIXI.Texture.from(yinghuashuPath),
+      yinghuashuPathJS
+    );
+    yinghuashusheet.parse();
+    const yinghuashusp = new AnimatedSprite(
+      yinghuashusheet.animations["0fce7ce5942b91467435bcbbeeae7cbe"]
+    );
+    yinghuashusp.animationSpeed = 0.08;
+    yinghuashusp.interactive = true;
+    yinghuashusp.loop = true;
+    yinghuashusp.gotoAndPlay(0);
+    const yinghuashuobj: SpriteEntry = new SpriteEntry(
+      yinghuashusp,
+      yinghuashuPathGIF,
+      "yinghuashu",
+      150,
+      600,
+      300,
+      200
+    );
+    //落花
+
+    const luohuasheet = new Spritesheet(
+      PIXI.Texture.from(luohuaPath),
+      luohuaPathJS
+    );
+    luohuasheet.parse();
+    const luohuasp = new AnimatedSprite(
+      luohuasheet.animations["0fb2d1232966ba7925141896913d3a"]
+    );
+    luohuasp.animationSpeed = 0.05;
+    luohuasp.interactive = true;
+    luohuasp.loop = true;
+    luohuasp.gotoAndPlay(0);
+    const luohuaobj: SpriteEntry = new SpriteEntry(
+      luohuasp,
+      luohuaPathGIF,
+      "luohua",
+      150,
+      600,
+      90,
+      90
+    );
+    //温度计
+    const wendujisheet = new Spritesheet(
+      PIXI.Texture.from(wendujiPath),
+      wendujiPathJS
+    );
+    wendujisheet.parse();
+    const wendujiansp = new AnimatedSprite(
+      wendujisheet.animations["0ee4442ef715642a383c7e1055887d7d"]
+    );
+    wendujiansp.animationSpeed = 0.01;
+    wendujiansp.interactive = true;
+    wendujiansp.loop = true;
+    wendujiansp.gotoAndPlay(0);
+    const wendujiobj: SpriteEntry = new SpriteEntry(
+      wendujiansp,
+      wendujiPath2,
+      "wenduji",
+      150,
+      600,
+      90,
+      90
+    );
     //壁炉
     const sheet = new Spritesheet(
       PIXI.Texture.from(fireplacePath),
@@ -81,7 +276,6 @@ export const PixiEngine = {
       ansp,
       biluPath,
       "fireplace",
-      69 * wr,
       150,
       500,
       138,
@@ -108,7 +302,6 @@ export const PixiEngine = {
       picansp,
       picturePath2,
       "picture",
-      138 * wr,
       300,
       400,
       138,
@@ -123,7 +316,6 @@ export const PixiEngine = {
       guizi,
       guiziPath,
       "guizi",
-      138 * wr,
       180,
       700,
       138,
@@ -141,7 +333,6 @@ export const PixiEngine = {
       xiaomihu,
       xiaomihuPath,
       "xiaomihu",
-      69 * wr,
       75,
       250,
       69,
@@ -157,7 +348,6 @@ export const PixiEngine = {
       xiaosongshu,
       xiaosongshuPath,
       "xiaosongshu",
-      69 * wr,
       75,
       330,
       69,
@@ -165,10 +355,18 @@ export const PixiEngine = {
     );
 
     //信息初始化区
+    this.loadsp(wendujiobj);
     this.loadsp(fireplaceobj);
     this.loadsp(guiziobj);
     this.loadsp(xiaomihuobj);
     this.loadsp(xiaosongshuobj);
+    this.loadsp(luohuaobj);
+    this.loadsp(yinghuashuobj);
+    this.loadsp(huaobj);
+    this.loadsp(heyeobj);
+    this.loadsp(xiaocaoobj);
+    this.loadsp(caocongobj);
+    this.loadsp(shizhongobj);
     // picanspobj.load();
   },
   loadsp(spobj: SpriteEntry) {
@@ -200,8 +398,17 @@ export const PixiEngine = {
       assist.sprebackregister(PixiApp.stage.getChildByName("xiaosongshu"));
       assist.sprebackregister(PixiApp.stage.getChildByName("guizi"));
       assist.sprebackregister(PixiApp.stage.getChildByName("fireplace"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("wenduji"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("luohua"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("yinghuashu"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("hua"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("heye"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("xiaocao"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("caocong"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("shizhong"));
     });
   },
+
   getloadsprite() {
     return spritelist;
   },

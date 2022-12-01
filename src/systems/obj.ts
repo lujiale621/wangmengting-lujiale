@@ -72,7 +72,7 @@ export class SpriteEntry implements Action {
     this.rectangle.lineStyle(1, 0xffffff, 1);
     this.rectangle.drawRect(
       this.sprite!.position._x - boxwidth / 2,
-      this.sprite!.position._y - boxwidth / 2,
+      this.sprite!.position._y - boxheight / 2,
       boxwidth,
       boxheight
     );
@@ -86,7 +86,7 @@ export class SpriteEntry implements Action {
     right.interactive = true;
     right.position = {
       x: this.sprite!.position._x - boxwidth / 2,
-      y: this.sprite!.position._y - boxwidth / 2,
+      y: this.sprite!.position._y - boxheight / 2,
     };
     right.on("tap", (event: any) => {
       console.log("tap");
@@ -102,7 +102,7 @@ export class SpriteEntry implements Action {
     close.interactive = true;
     close.position = {
       x: this.sprite!.position._x + boxwidth / 2,
-      y: this.sprite!.position._y - boxwidth / 2,
+      y: this.sprite!.position._y - boxheight / 2,
     };
     close.on("tap", (event) => {
       spgroup.visible = false;
@@ -118,7 +118,7 @@ export class SpriteEntry implements Action {
   }
   public isDragging = false;
   private isscaleing = false;
-  private init_drag(width: number) {
+  private init_drag() {
     if (this.sprite) {
       console.log("监听精灵拖动事件");
       this.spgroup
@@ -169,7 +169,6 @@ export class SpriteEntry implements Action {
     sprite: Sprite | AnimatedSprite,
     url: string,
     name: string,
-    width: number,
     mapx: number,
     mapy: number,
     mapwidth: number,
@@ -186,7 +185,7 @@ export class SpriteEntry implements Action {
     this.mapwidth = mapwidth;
     this.mapheight = mapheight;
     this.spriteset = false;
-    this.init_drag(width);
+    this.init_drag();
     sprite!.anchor.x = 0.5;
     sprite!.anchor.y = 0.5;
     this.initinfo();
