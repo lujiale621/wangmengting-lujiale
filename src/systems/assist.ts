@@ -123,6 +123,12 @@ export const assist = {
     );
     return [wr, hr];
   },
+  //得到当前屏幕中心坐标
+  getcenterpos(x: number, y: number) {
+    const x1 = x - scwidth / 2;
+    const y1 = y - scheight / 2;
+    return [x1, y1];
+  },
   getlocalpos(x: number, y: number) {
     const width = 414;
     const height = 896;
@@ -269,7 +275,13 @@ export const assist = {
           maxleftmovelenth = 0;
           maxrightmovelenth = 2 * poivlength;
           // PixiApp.stage.position.x = 0;
-          PixiApp.stage.position.y = -poivlength;
+
+          for (let i = 0; i <= 3; i++) {
+            PixiApp.stage.position.y = -poivlength + i;
+            console.log(" PixiApp.stage.position.y:", PixiApp.stage.position.y);
+            maxrightmovelenth = maxrightmovelenth - i;
+            maxleftmovelenth = maxleftmovelenth + i;
+          }
 
           console.log("maxleftmovelenth reset");
           console.log(
@@ -285,7 +297,11 @@ export const assist = {
           maxleftmovelenth = 2 * poivlength;
 
           // PixiApp.stage.position.x = 0;
-          PixiApp.stage.position.y = poivlength;
+          for (let i = 0; i <= 3; i++) {
+            PixiApp.stage.position.y = poivlength - i;
+            maxrightmovelenth = maxrightmovelenth + i;
+            maxleftmovelenth = maxleftmovelenth - i;
+          }
           console.log("maxrightmovelenth reset");
           console.log(
             "maxleftmovelenth:",
@@ -298,7 +314,11 @@ export const assist = {
           dragFlag = false;
           maxtopmovelenth = 0;
           maxbottommovelenth = 2 * pohilength;
-          PixiApp.stage.position.x = -pohilength;
+          for (let i = 0; i <= 3; i++) {
+            PixiApp.stage.position.x = -pohilength + i;
+            maxtopmovelenth = maxtopmovelenth + i;
+            maxbottommovelenth = maxbottommovelenth - i;
+          }
           // PixiApp.stage.position.y = -pohilength;
 
           console.log("maxtopmovelenth reset");
@@ -313,8 +333,11 @@ export const assist = {
           dragFlag = false;
           maxbottommovelenth = 0;
           maxtopmovelenth = 2 * pohilength;
-
-          PixiApp.stage.position.x = pohilength;
+          for (let i = 0; i <= 3; i++) {
+            PixiApp.stage.position.x = pohilength - i;
+            maxbottommovelenth = maxbottommovelenth + i;
+            maxtopmovelenth = maxtopmovelenth - i;
+          }
           // PixiApp.stage.position.y = pohilength;
           console.log("maxbottommovelenth reset");
           console.log(
@@ -354,5 +377,42 @@ export const assist = {
         sp.visible = objstr.visable;
       }
     });
+  },
+  sprebackregister(sp: Container) {
+    let direction = "null";
+    const da = this.getcenterpos(sp.position.x, sp.position.y);
+    const x = da[0];
+    const y = da[1];
+    const halfheight = bgheigth / 2 - 20;
+    const halfwidth = bgwidth / 2 - 20;
+    if (x > halfwidth) {
+      direction = "bottom";
+    }
+    if (-x > halfwidth) {
+      direction = "top";
+    }
+    if (y > halfheight) {
+      direction = "left";
+    }
+    if (-y > halfheight) {
+      direction = "right";
+    }
+
+    if (direction != "null") {
+      for (let i = 0; i <= 10; i++) {
+        if (direction == "right") {
+          sp.position.y = sp.position.y + i;
+        }
+        if (direction == "left") {
+          sp.position.y = sp.position.y - i;
+        }
+        if (direction == "top") {
+          sp.position.x = sp.position.x + i;
+        }
+        if (direction == "bottom") {
+          sp.position.x = sp.position.x - i;
+        }
+      }
+    }
   },
 };

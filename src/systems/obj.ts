@@ -116,7 +116,7 @@ export class SpriteEntry implements Action {
     console.log("矩形框和精灵初始化");
     this.rectangle.visible = false;
   }
-  private isDragging = false;
+  public isDragging = false;
   private isscaleing = false;
   private init_drag(width: number) {
     if (this.sprite) {

@@ -195,10 +195,11 @@ export const PixiEngine = {
   tickinit() {
     PixiApp.ticker.add((delta) => {
       // console.log("ricker");
-      const tag = tool.hitTestRectangle(
-        PixiApp.stage.getChildByName("xiaomihu"),
-        PixiApp.stage.getChildByName("xiaosongshu")
-      );
+      //触碰边缘回弹
+      assist.sprebackregister(PixiApp.stage.getChildByName("xiaomihu"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("xiaosongshu"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("guizi"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("fireplace"));
     });
   },
   getloadsprite() {
