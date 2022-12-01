@@ -4,7 +4,7 @@ import type { Ref } from "vue";
 import { PixiEngine } from "./systems/engine";
 import { Spritesheet, AnimatedSprite } from "pixi.js";
 import { Sound } from "@pixi/sound";
-import bag from "./components/Bag.vue";
+import bag from "./components/BagBox.vue";
 import type { SpriteEntry } from "./systems/obj";
 import soundPath from "@/assets/bg.mp3";
 import musicopenPath from "@/assets/musicopen.png";
@@ -13,6 +13,7 @@ import * as PIXI from "pixi.js";
 import furSet from "@/assets/set.png";
 import furSave from "@/assets/save.png";
 import { Pixihttp } from "./systems/http";
+import BagBox from "./components/BagBox.vue";
 // import furniturepath from "../src/assets/set.png"
 let sound: Sound;
 const canvas: Ref<Node | null> = ref(null);
@@ -102,7 +103,7 @@ onMounted(async () => {
       class="setmusicbuttom"
       @click="onMusic"
     ></div>
-    <bag msg="asd" :splist="spritelist" v-if="!furnitureflag"></bag>
+    <BagBox msg="asd" :splist="spritelist" v-if="!furnitureflag"></BagBox>
   </div>
 </template>
 

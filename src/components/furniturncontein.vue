@@ -1,3 +1,4 @@
+// eslint-disable-next-line vue/multi-word-component-names
 <script setup lang="ts">
 // import { ref } from "vue";
 import { onMounted } from "vue";
