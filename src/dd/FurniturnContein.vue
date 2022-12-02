@@ -48,6 +48,7 @@ const imgUrl = new URL(prop.sp?.url, import.meta.url);
   background-size: 100% 100%;
   width: 53px;
   height: 53px;
+  margin: 0px 5px;
 }
 .box {
   width: 50px;
@@ -55,7 +56,7 @@ const imgUrl = new URL(prop.sp?.url, import.meta.url);
   background-image: url("@/assets/furnbg.png");
   background-size: 100% 100%;
   transform: rotate(90deg);
-  margin: 6px 2px;
+
   align-items: center;
 }
 </style>

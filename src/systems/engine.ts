@@ -8,11 +8,9 @@ import fireplacePathJS from "@/assets/fireplace/fireplace.json";
 import guiziPath from "@/assets/guizi.png";
 import xiaomihuPath from "@/assets/xiaomihu.png";
 import xiaosongshuPath from "@/assets/xiaosongshu.png";
-import picturePath from "@/assets/picture/picture.png";
-import picturePath2 from "@/assets/picture/picture2.png";
-import picturePathJS from "@/assets/picture/picture.json";
+
 import wendujiPath from "@/assets/wenduji/wenduji.png";
-import wendujiPath2 from "@/assets/wenduji/wenduji2.png";
+import wendujiPathgif from "@/assets/wenduji/wenduji.gif";
 import wendujiPathJS from "@/assets/wenduji/wenduji.json";
 import luohuaPath from "@/assets/luohua/luohua.png";
 import luohuaPathGIF from "@/assets/luohua/luohua.gif";
@@ -38,7 +36,18 @@ import shizhongPathJS from "@/assets/shizhong/shizhong.json";
 import guoPath from "@/assets/guo/guo.png";
 import guoPathGIF from "@/assets/guo/guo.gif";
 import guoPathJS from "@/assets/guo/guo.json";
-
+import shafaPath from "@/assets/shafa.png";
+import axiPath from "@/assets/axi.png";
+import bingxiangPath from "@/assets/bingxiang.png";
+import chuguiPath from "@/assets/chugui.png";
+import shujiaPath from "@/assets/shujia.png";
+import topguiPath from "@/assets/topgui.png";
+import matongPath from "@/assets/matong.png";
+import xishoupenPath from "@/assets/xishoupen.png";
+import chuanghuPath from "@/assets/chuanghu.png";
+import xiaoguiziPath from "@/assets/xiaoguizi.png";
+import yiguiPath from "@/assets/yigui.png";
+import maojingPath from "@/assets/maojing.png";
 import shuPath from "@/assets/shu/shu.png";
 import shuPathGIF from "@/assets/shu/shu.gif";
 import shuPathJS from "@/assets/shu/shu.json";
@@ -61,7 +70,6 @@ let scwidth: number;
 let scheight: number;
 export const PixiEngine = {
   init(width: number, height: number) {
-    this.testapi();
     //屏幕和位置参数的设置
     const da: Array<number> = assist.initpardata(width, height);
     scwidth = da[0];
@@ -109,7 +117,7 @@ export const PixiEngine = {
       huapensheet.animations["24afb299ff52c2481dfd0c991cb8d57a"]
     );
     huapensp.animationSpeed = 0.05;
-    huapensp.interactive = true;
+
     huapensp.loop = true;
     huapensp.gotoAndPlay(0);
     const huapenobj: SpriteEntry = new SpriteEntry(
@@ -128,7 +136,7 @@ export const PixiEngine = {
       shusheet.animations["f31b4a9dae7041e171ce5a56dda5d8a"]
     );
     shusp.animationSpeed = 0.05;
-    shusp.interactive = true;
+
     shusp.loop = true;
     shusp.gotoAndPlay(0);
     const shuobj: SpriteEntry = new SpriteEntry(
@@ -147,7 +155,7 @@ export const PixiEngine = {
       guosheet.animations["2424c7ec7ae01964a42dd618c0ce5aa"]
     );
     guosp.animationSpeed = 0.05;
-    guosp.interactive = true;
+
     guosp.loop = true;
     guosp.gotoAndPlay(0);
     const guoobj: SpriteEntry = new SpriteEntry(
@@ -169,7 +177,7 @@ export const PixiEngine = {
       shizhongsheet.animations["568c24782fd06ec7702575a324caccf"]
     );
     shizhongsp.animationSpeed = 0.005;
-    shizhongsp.interactive = true;
+
     shizhongsp.loop = true;
     shizhongsp.gotoAndPlay(0);
     const shizhongobj: SpriteEntry = new SpriteEntry(
@@ -191,7 +199,7 @@ export const PixiEngine = {
       xiaocaosheet.animations["3e72d2305d5b8bb138068391c68452b"]
     );
     xiaocaosp.animationSpeed = 0.05;
-    xiaocaosp.interactive = true;
+
     xiaocaosp.loop = true;
     xiaocaosp.gotoAndPlay(0);
     const xiaocaoobj: SpriteEntry = new SpriteEntry(
@@ -213,7 +221,7 @@ export const PixiEngine = {
       caocongsheet.animations["5e3b4c18753c3b6f9125bc6ca3d5f79c"]
     );
     caocongsp.animationSpeed = 0.05;
-    caocongsp.interactive = true;
+
     caocongsp.loop = true;
     caocongsp.gotoAndPlay(0);
     const caocongobj: SpriteEntry = new SpriteEntry(
@@ -232,7 +240,7 @@ export const PixiEngine = {
       heyesheet.animations["3d6cb1337a4516bbd5d425f2f7a05b"]
     );
     heyesp.animationSpeed = 0.05;
-    heyesp.interactive = true;
+
     heyesp.loop = true;
     heyesp.gotoAndPlay(0);
     const heyeobj: SpriteEntry = new SpriteEntry(
@@ -251,7 +259,7 @@ export const PixiEngine = {
       huasheet.animations["2a4437fb90f7169cb29a9ad86cfee13f"]
     );
     huasp.animationSpeed = 0.05;
-    huasp.interactive = true;
+
     huasp.loop = true;
     huasp.gotoAndPlay(0);
     const huaobj: SpriteEntry = new SpriteEntry(
@@ -272,8 +280,8 @@ export const PixiEngine = {
     const yinghuashusp = new AnimatedSprite(
       yinghuashusheet.animations["0fce7ce5942b91467435bcbbeeae7cbe"]
     );
-    yinghuashusp.animationSpeed = 0.08;
-    yinghuashusp.interactive = true;
+    yinghuashusp.animationSpeed = 0.01;
+
     yinghuashusp.loop = true;
     yinghuashusp.gotoAndPlay(0);
     const yinghuashuobj: SpriteEntry = new SpriteEntry(
@@ -296,7 +304,7 @@ export const PixiEngine = {
       luohuasheet.animations["0fb2d1232966ba7925141896913d3a"]
     );
     luohuasp.animationSpeed = 0.05;
-    luohuasp.interactive = true;
+
     luohuasp.loop = true;
     luohuasp.gotoAndPlay(0);
     const luohuaobj: SpriteEntry = new SpriteEntry(
@@ -318,12 +326,12 @@ export const PixiEngine = {
       wendujisheet.animations["0ee4442ef715642a383c7e1055887d7d"]
     );
     wendujiansp.animationSpeed = 0.01;
-    wendujiansp.interactive = true;
+
     wendujiansp.loop = true;
     wendujiansp.gotoAndPlay(0);
     const wendujiobj: SpriteEntry = new SpriteEntry(
       wendujiansp,
-      wendujiPath2,
+      wendujiPathgif,
       "wenduji",
       150,
       600,
@@ -339,7 +347,7 @@ export const PixiEngine = {
     sheet.parse();
     const ansp = new AnimatedSprite(sheet.animations["fireplace_wps图片"]);
     ansp.animationSpeed = 0.2;
-    ansp.interactive = true;
+
     ansp.loop = true;
     ansp.gotoAndPlay(0);
     const fireplaceobj: SpriteEntry = new SpriteEntry(
@@ -352,34 +360,95 @@ export const PixiEngine = {
       138
     );
 
-    //画
-    const picsheet = new Spritesheet(
-      PIXI.Texture.from(picturePath),
-      picturePathJS
-    );
-
-    picsheet.parse();
-    const picansp = new AnimatedSprite(
-      picsheet.animations["070e35bd86e25290dac7286ec8e63563_wps图片"]
-    );
-    picansp.animationSpeed = 0.2;
-    picansp.interactive = true;
-    picansp.loop = true;
-    // picansp.gotoAndPlay(0);
-    picansp.name = "picture";
-
-    const picanspobj: SpriteEntry = new SpriteEntry(
-      picansp,
-      picturePath2,
-      "picture",
-      300,
-      400,
-      138,
-      90
-    );
-
     // spritelist.push(picanspobj);
     console.log("Spritesheet ready to use!");
+    //沙发
+    const shafa = new PIXI.Sprite(PIXI.Texture.from(shafaPath));
+    const shafaobj: SpriteEntry = new SpriteEntry(
+      shafa,
+      shafaPath,
+      "shafa",
+      300,
+      700,
+      200,
+      100
+    );
+    //沙发
+    const shujia = new PIXI.Sprite(PIXI.Texture.from(shujiaPath));
+    const shujiaobj: SpriteEntry = new SpriteEntry(
+      shujia,
+      shujiaPath,
+      "shujia",
+      100,
+      700,
+      100,
+      50
+    );
+    //沙发
+    const topgui = new PIXI.Sprite(PIXI.Texture.from(topguiPath));
+    const topguiobj: SpriteEntry = new SpriteEntry(
+      topgui,
+      topguiPath,
+      "topgui",
+      130,
+      300,
+      120,
+      60
+    );
+    //橱柜
+    const chugui = new PIXI.Sprite(PIXI.Texture.from(chuguiPath));
+    const chuguiobj: SpriteEntry = new SpriteEntry(
+      chugui,
+      chuguiPath,
+      "chugui",
+      450,
+      700,
+      100,
+      100
+    );
+    //衣柜
+    const yigui = new PIXI.Sprite(PIXI.Texture.from(yiguiPath));
+    const yiguiobj: SpriteEntry = new SpriteEntry(
+      yigui,
+      yiguiPath,
+      "yigui",
+      100,
+      300,
+      80,
+      120
+    );
+    const axi = new PIXI.Sprite(PIXI.Texture.from(axiPath));
+    const axiobj: SpriteEntry = new SpriteEntry(
+      axi,
+      axiPath,
+      "axi",
+      100,
+      300,
+      80,
+      50
+    );
+    //小柜
+    const xiaoguizi = new PIXI.Sprite(PIXI.Texture.from(xiaoguiziPath));
+    const xiaoguiziobj: SpriteEntry = new SpriteEntry(
+      xiaoguizi,
+      xiaoguiziPath,
+      "xiaoguizi",
+      150,
+      420,
+      100,
+      100
+    );
+    //bingxiang
+    const bingxiang = new PIXI.Sprite(PIXI.Texture.from(bingxiangPath));
+    const bingxiangobj: SpriteEntry = new SpriteEntry(
+      bingxiang,
+      bingxiangPath,
+      "bingxiang",
+      550,
+      700,
+      100,
+      200
+    );
     //柜子
     guizi = new PIXI.Sprite(PIXI.Texture.from(guiziPath));
     const guiziobj: SpriteEntry = new SpriteEntry(
@@ -391,7 +460,46 @@ export const PixiEngine = {
       138,
       138
     );
-    guizi.interactive = true;
+    const matong = new PIXI.Sprite(PIXI.Texture.from(matongPath));
+    const matongobj: SpriteEntry = new SpriteEntry(
+      matong,
+      matongPath,
+      "matong",
+      300,
+      100,
+      50,
+      50
+    );
+    const chuanghu = new PIXI.Sprite(PIXI.Texture.from(chuanghuPath));
+    const chuanghuobj: SpriteEntry = new SpriteEntry(
+      chuanghu,
+      chuanghuPath,
+      "chuanghu",
+      300,
+      100,
+      60,
+      60
+    );
+    const maojing = new PIXI.Sprite(PIXI.Texture.from(maojingPath));
+    const maojingobj: SpriteEntry = new SpriteEntry(
+      maojing,
+      maojingPath,
+      "maojing",
+      200,
+      100,
+      50,
+      50
+    );
+    const xishoupen = new PIXI.Sprite(PIXI.Texture.from(xishoupenPath));
+    const xishoupenobj: SpriteEntry = new SpriteEntry(
+      xishoupen,
+      xishoupenPath,
+      "xishoupen",
+      300,
+      100,
+      70,
+      70
+    );
 
     guizi.name = "guizi";
     // xiaomihu.angle = 90;
@@ -440,6 +548,18 @@ export const PixiEngine = {
     this.loadsp(guoobj);
     this.loadsp(huapenobj);
     this.loadsp(shuobj);
+    this.loadsp(shafaobj);
+    this.loadsp(chuguiobj);
+    this.loadsp(bingxiangobj);
+    this.loadsp(shujiaobj);
+    this.loadsp(topguiobj);
+    this.loadsp(xiaoguiziobj);
+    this.loadsp(yiguiobj);
+    this.loadsp(axiobj);
+    this.loadsp(matongobj);
+    this.loadsp(maojingobj);
+    this.loadsp(xishoupenobj);
+    this.loadsp(chuanghuobj);
     // picanspobj.load();
   },
   loadsp(spobj: SpriteEntry) {
@@ -449,9 +569,6 @@ export const PixiEngine = {
   },
   //加载监听器
   loadeventlisten() {
-    xiaomihu.interactive = true;
-    xiaosongshu.interactive = true;
-
     //缩放事件
     window.addEventListener("mousewheel", (event: any) => {
       console.log("mousewheel");
@@ -482,6 +599,18 @@ export const PixiEngine = {
       assist.sprebackregister(PixiApp.stage.getChildByName("guo"));
       assist.sprebackregister(PixiApp.stage.getChildByName("huapen"));
       assist.sprebackregister(PixiApp.stage.getChildByName("shu"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("chugui"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("shafa"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("bingxiang"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("shujia"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("topgui"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("yigui"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("xiaoguizi"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("axi"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("maojing"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("matong"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("xishoupen"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("chuanghu"));
     });
   },
 

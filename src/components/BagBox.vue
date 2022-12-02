@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { onMounted } from "vue";
-import BetterScroll from "better-scroll";
+
 import FurniturnContein from "../dd/FurniturnContein.vue";
 // init Swiper:
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/swiper-bundle.css";
+
 import type { SpriteEntry } from "../systems/obj";
 // import { Sprite } from "pixi.js";
 // let spritelist: Array<spriteobj>
@@ -11,30 +15,24 @@ const count = ref(0);
 // let spobj: SpriteEntry;
 const widtha = ref(1);
 const heightb = ref(1);
-
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "vertical",
+//   loop: true,
+// });
 defineProps<{ msg: string; splist: Array<SpriteEntry> }>();
 onMounted(() => {
   widtha.value = window.screen.width;
   heightb.value = window.screen.height;
   console.log(widtha.value);
-
-  let bs = new BetterScroll(".wrapper", {
-    movable: true,
-    scrollbar: true,
-    // zoom: true,
-    scrollY: true,
-    click: true,
-    bounce: true,
-    observeDOM: true,
-    observeDOMImage: true,
-  });
+  // SwiperCore.use([Pagination]);
   console.log("onBagMounted");
-  let timer = setTimeout(() => {
-    //需要定时执行的代码
-    console.log("Hello World");
-    console.log("Hello World");
-  }, 3000);
 });
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "vertical",
+//   loop: true,
+// });
 </script>
 
 <template>
@@ -42,15 +40,22 @@ onMounted(() => {
     :style="'width:' + '70' + 'px' + ';' + 'height:' + heightb + 'px'"
     class="wrapper"
   >
-    <div class="cont">
-      <div class="furniturn">
-        <ul class="content">
-          <li v-for="spobj in splist" :key="spobj.name">
-            <FurniturnContein :sp="spobj"></FurniturnContein>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <!-- <div class="cont">
+      <div class="furniturn"> -->
+    <swiper
+      :spaceBetween="2"
+      :slidesPerView="heightb / 60"
+      :freeMode="true"
+      :loop="false"
+      direction="vertical"
+      class="content"
+    >
+      <swiper-slide v-for="spobj in splist" :key="spobj.name">
+        <FurniturnContein :sp="spobj"></FurniturnContein>
+      </swiper-slide>
+    </swiper>
+    <!-- </div>
+    </div> -->
   </div>
 </template>
 
@@ -59,6 +64,16 @@ li {
   margin: 0px;
   list-style: none;
 }
+.content {
+  /* height: 30px;
+  width: 40px; */
+}
+/* swiper-slide swiper-slide-prev swiper-slide-active swiper-slide-next {
+  margin: 5%;
+  height: 50px !important;
+  width: 50px !important;
+} */
+/*  */
 .wrapper {
   background-color: bisque;
 
@@ -83,7 +98,8 @@ li {
   display: flex;
   position: absolute;
   background-size: 100% 100%;
-
+  /* height: 50px;
+  width: 50px; */
   top: 50%;
   left: 10%;
   padding-right: 5px;

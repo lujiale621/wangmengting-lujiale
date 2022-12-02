@@ -3,7 +3,7 @@ import { onMounted, ref } from "vue";
 import type { Ref } from "vue";
 import { PixiEngine } from "./systems/engine";
 import { Spritesheet, AnimatedSprite } from "pixi.js";
-import { Sound } from "@pixi/sound";
+// import { Sound } from "@pixi/sound";
 import type { SpriteEntry } from "./systems/obj";
 import soundPath from "@/assets/bg.mp3";
 import musicopenPath from "@/assets/musicopen.png";
@@ -14,7 +14,7 @@ import furSave from "@/assets/save.png";
 import { Pixihttp } from "./systems/http";
 import BagBox from "./components/BagBox.vue";
 // import furniturepath from "../src/assets/set.png"
-let sound: Sound;
+// let sound: Sound;
 const canvas: Ref<Node | null> = ref(null);
 // const music: Ref<HTMLElement | null> = ref(null);
 // const bag: Ref<HTMLElement | null> = ref(null);
@@ -32,10 +32,10 @@ const onMusic = () => {
   console.log(musicflag.value);
   if (musicflag.value == false) {
     console.log("music close");
-    sound.stop();
+    // sound.stop();
   } else {
     console.log("music open");
-    sound.play();
+    // sound.play();
   }
 };
 const onsetfurniture = () => {
@@ -46,6 +46,7 @@ const onsetfurniture = () => {
     for (let i = 0; i < spritelist.length; i++) {
       spritelist[i].setspedit(false);
       console.log("关闭精灵编辑状态：", spritelist[i]);
+      spritelist[i].sprite!.interactive = false;
       Pixihttp.updatasprite(spritelist[i]);
     }
     //关闭家具选择框
@@ -62,18 +63,18 @@ onMounted(async () => {
     console.log("竖屏");
   }
 
-  sound = Sound.from({
-    url: soundPath,
-    volume: 0.25,
-    autoPlay: true,
-    loaded: function () {
-      console.log("Sound loaded");
-    },
-    complete: function () {
-      console.log("Sound finished");
-    },
-  });
-  sound.play();
+  // sound = Sound.from({
+  //   url: soundPath,
+  //   volume: 0.25,
+  //   autoPlay: true,
+  //   loaded: function () {
+  //     console.log("Sound loaded");
+  //   },
+  //   complete: function () {
+  //     console.log("Sound finished");
+  //   },
+  // });
+  // sound.play();
   await PixiEngine.init(window.screen.width, window.screen.height);
   const canvasInfo = PixiEngine.getCanvas();
   // @ts-ignore

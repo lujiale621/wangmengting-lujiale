@@ -41,6 +41,7 @@ export class SpriteEntry implements Action {
     if (flag) {
       this.spgroup.visible = true;
       this.rectangle.visible = true;
+      this.sprite!.interactive = true;
     } else {
       this.rectangle.visible = false;
     }
@@ -92,6 +93,7 @@ export class SpriteEntry implements Action {
       console.log("tap");
       this.rectangle.visible = false;
       this.setspedit(false);
+      this.sprite!.interactive = false;
       Pixihttp.updatasprite(this);
     });
     const close = new PIXI.Sprite(PIXI.Texture.from(closepath));
@@ -126,6 +128,7 @@ export class SpriteEntry implements Action {
           console.log("touchstart");
           if (this.spriteset) {
             this.isDragging = true;
+
             startPoint = { x: event.data.global.x, y: event.data.global.y };
           }
         })

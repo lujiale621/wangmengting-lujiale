@@ -1,135 +1,51 @@
 {"frames": {
 
-"fireplace_wps图片_41.png":
+"fireplace_wps图片_62.png":
 {
-	"frame": {"x":1,"y":1,"w":567,"h":413},
+	"frame": {"x":0,"y":0,"w":620,"h":620},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":620,"h":620},
+	"sourceSize": {"w":620,"h":620},
+	"anchor": {"x":0.5,"y":0.5}
 },
-"fireplace_wps图片_42.png":
+"fireplace_wps图片_63.png":
 {
-	"frame": {"x":570,"y":1,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_43.png":
-{
-	"frame": {"x":1,"y":416,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_44.png":
-{
-	"frame": {"x":416,"y":570,"w":567,"h":413},
+	"frame": {"x":620,"y":0,"w":620,"h":620},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":620,"h":620},
+	"sourceSize": {"w":620,"h":620},
+	"anchor": {"x":0.5,"y":0.5}
 },
-"fireplace_wps图片_45.png":
+"fireplace_wps图片_70.png":
 {
-	"frame": {"x":985,"y":1,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_46.png":
-{
-	"frame": {"x":985,"y":570,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_47.png":
-{
-	"frame": {"x":1,"y":985,"w":567,"h":413},
+	"frame": {"x":0,"y":620,"w":620,"h":620},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":620,"h":620},
+	"sourceSize": {"w":620,"h":620},
+	"anchor": {"x":0.5,"y":0.5}
 },
-"fireplace_wps图片_48.png":
+"fireplace_wps图片_71.png":
 {
-	"frame": {"x":570,"y":985,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_54.png":
-{
-	"frame": {"x":1,"y":1400,"w":567,"h":413},
+	"frame": {"x":620,"y":620,"w":620,"h":620},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_55.png":
-{
-	"frame": {"x":985,"y":1139,"w":567,"h":413},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_56.png":
-{
-	"frame": {"x":1400,"y":1,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_57.png":
-{
-	"frame": {"x":1400,"y":570,"w":567,"h":413},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_58.png":
-{
-	"frame": {"x":1554,"y":985,"w":567,"h":413},
-	"rotated": true,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_59.png":
-{
-	"frame": {"x":570,"y":1554,"w":567,"h":413},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
-},
-"fireplace_wps图片_60.png":
-{
-	"frame": {"x":1139,"y":1554,"w":567,"h":413},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":26,"y":138,"w":567,"h":413},
-	"sourceSize": {"w":620,"h":620}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":620,"h":620},
+	"sourceSize": {"w":620,"h":620},
+	"anchor": {"x":0.5,"y":0.5}
 }},
 "animations": {
-	"fireplace_wps图片": ["fireplace_wps图片_41.png","fireplace_wps图片_42.png","fireplace_wps图片_43.png","fireplace_wps图片_44.png","fireplace_wps图片_45.png","fireplace_wps图片_46.png","fireplace_wps图片_47.png","fireplace_wps图片_48.png","fireplace_wps图片_54.png","fireplace_wps图片_55.png","fireplace_wps图片_56.png","fireplace_wps图片_57.png","fireplace_wps图片_58.png","fireplace_wps图片_59.png","fireplace_wps图片_60.png"]
+	"fireplace_wps图片": ["fireplace_wps图片_62.png","fireplace_wps图片_63.png","fireplace_wps图片_70.png","fireplace_wps图片_71.png"]
 },
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "fireplace.png",
 	"format": "RGBA8888",
-	"size": {"w":1968,"h":1968},
+	"size": {"w":1240,"h":1240},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:00919a1a33fe589c9b4e56086fe5709e:889096c894b61956424ff264c75eb2be:1e1371bc0bf0eedc609662f2facd3bdd$"
+	"smartupdate": "$TexturePacker:SmartUpdate:12bb8f0fd573f67ac6ec5e1a64a547d1:6711ac4bcc571b314df1a50ff32ab516:1e1371bc0bf0eedc609662f2facd3bdd$"
 }
 }
