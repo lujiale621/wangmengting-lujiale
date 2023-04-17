@@ -8,6 +8,10 @@ import fireplacePathJS from "@/assets/fireplace/fireplace.json";
 import guiziPath from "@/assets/guizi.png";
 import xiaomihuPath from "@/assets/xiaomihu.png";
 import xiaosongshuPath from "@/assets/xiaosongshu.png";
+import bedPath from "@/assets/bed.png";
+import qiaokeliPath from "@/assets/qiaokeli.png";
+import doudouPath from "@/assets/doudou.png";
+import rabbitPath from "@/assets/rabbit.png";
 
 import wendujiPath from "@/assets/wenduji/wenduji.png";
 import wendujiPathgif from "@/assets/wenduji/wenduji.gif";
@@ -48,6 +52,9 @@ import chuanghuPath from "@/assets/chuanghu.png";
 import xiaoguiziPath from "@/assets/xiaoguizi.png";
 import yiguiPath from "@/assets/yigui.png";
 import maojingPath from "@/assets/maojing.png";
+import shengdanshuPath from "@/assets/shengdanshu/shengdanshu.png";
+import shengdanshuPathGIF from "@/assets/shengdanshu/shengdanshu.gif";
+import shengdanshuPathJS from "@/assets/shengdanshu/shengdanshu.json";
 import shuPath from "@/assets/shu/shu.png";
 import shuPathGIF from "@/assets/shu/shu.gif";
 import shuPathJS from "@/assets/shu/shu.json";
@@ -57,6 +64,7 @@ import huapenPathJS from "@/assets/huapen/huapen.json";
 import { assist } from "./assist";
 import { Pixihttp } from "./http";
 import { tool } from "./tools";
+import { AppIpfs } from "./ipfs";
 const spritelist: Array<SpriteEntry> = new Array<SpriteEntry>();
 let PixiApp: PIXI.Application;
 let wr = 0;
@@ -91,10 +99,9 @@ export const PixiEngine = {
       backgroundAlpha: 0.2,
       resolution: 1,
     });
+    this.testapi();
   },
-  testapi() {
-    Pixihttp.getspritedata();
-  },
+  testapi() {},
 
   getPixiApp() {
     return PixiApp;
@@ -316,6 +323,28 @@ export const PixiEngine = {
       90,
       90
     );
+    //圣诞树
+    const shengdanshusheet = new Spritesheet(
+      PIXI.Texture.from(shengdanshuPath),
+      shengdanshuPathJS
+    );
+    shengdanshusheet.parse();
+    const shengdanshusp = new AnimatedSprite(
+      shengdanshusheet.animations["5b7e1c57461cad9bcb5007d070c101a"]
+    );
+    shengdanshusp.animationSpeed = 0.01;
+
+    shengdanshusp.loop = true;
+    shengdanshusp.gotoAndPlay(0);
+    const shengdanshuobj: SpriteEntry = new SpriteEntry(
+      shengdanshusp,
+      shengdanshuPathGIF,
+      "shengdanshu",
+      350,
+      600,
+      120,
+      180
+    );
     //温度计
     const wendujisheet = new Spritesheet(
       PIXI.Texture.from(wendujiPath),
@@ -438,6 +467,51 @@ export const PixiEngine = {
       100,
       100
     );
+    //床
+    const bed = new PIXI.Sprite(PIXI.Texture.from(bedPath));
+    const bedobj: SpriteEntry = new SpriteEntry(
+      bed,
+      bedPath,
+      "bed",
+      150,
+      420,
+      160,
+      160
+    );
+    //床
+    const qiaokeli = new PIXI.Sprite(PIXI.Texture.from(qiaokeliPath));
+    const qiaokeliobj: SpriteEntry = new SpriteEntry(
+      qiaokeli,
+      qiaokeliPath,
+      "qiaokeli",
+      150,
+      370,
+      50,
+      50
+    );
+    //床
+    const doudou = new PIXI.Sprite(PIXI.Texture.from(doudouPath));
+    const doudouobj: SpriteEntry = new SpriteEntry(
+      doudou,
+      doudouPath,
+      "doudou",
+      150,
+      250,
+      50,
+      50
+    );
+    //床
+    const rabbit = new PIXI.Sprite(PIXI.Texture.from(rabbitPath));
+    const rabbitobj: SpriteEntry = new SpriteEntry(
+      rabbit,
+      rabbitPath,
+      "rabbit",
+      150,
+      120,
+      50,
+      50
+    );
+
     //bingxiang
     const bingxiang = new PIXI.Sprite(PIXI.Texture.from(bingxiangPath));
     const bingxiangobj: SpriteEntry = new SpriteEntry(
@@ -560,6 +634,12 @@ export const PixiEngine = {
     this.loadsp(maojingobj);
     this.loadsp(xishoupenobj);
     this.loadsp(chuanghuobj);
+    this.loadsp(shengdanshuobj);
+    this.loadsp(bedobj);
+    this.loadsp(qiaokeliobj);
+    this.loadsp(doudouobj);
+    this.loadsp(rabbitobj);
+
     // picanspobj.load();
   },
   loadsp(spobj: SpriteEntry) {
@@ -611,6 +691,11 @@ export const PixiEngine = {
       assist.sprebackregister(PixiApp.stage.getChildByName("matong"));
       assist.sprebackregister(PixiApp.stage.getChildByName("xishoupen"));
       assist.sprebackregister(PixiApp.stage.getChildByName("chuanghu"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("shengdanshu"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("bed"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("qiaokeli"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("rabbit"));
+      assist.sprebackregister(PixiApp.stage.getChildByName("doudou"));
     });
   },
 

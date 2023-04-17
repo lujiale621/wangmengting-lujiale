@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { onMounted } from "vue";
 
-import FurniturnContein from "../dd/FurniturnContein.vue";
+import FurniturnContein from "./FurniturnContein.vue";
 // init Swiper:
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
